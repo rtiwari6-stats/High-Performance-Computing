@@ -1,0 +1,3783 @@
+
+;; Function std::__cxx11::stol (_ZNSt7__cxx114stolERKNS_12basic_stringIcSt11char_traitsIcESaIcEEEPmi, funcdef_no=909, decl_uid=20036, cgraph_uid=212, symbol_order=213)
+
+std::__cxx11::stol (const struct string & __str, size_t * __idx, int __base)
+{
+  long int D.85131;
+  long int D.85129;
+  const char * _1;
+  long int _8;
+  long int _9;
+
+  <bb 2> :
+  _1 = std::__cxx11::basic_string<char>::c_str (__str_3(D));
+  _8 = __gnu_cxx::__stoa<long int> (strtol, "stol", _1, __idx_5(D), __base_6(D));
+  _9 = _8;
+
+  <bb 3> :
+<L0>:
+  return _9;
+
+}
+
+
+
+;; Function std::operator& (_ZStanSt13_Ios_FmtflagsS_, funcdef_no=1114, decl_uid=27226, cgraph_uid=351, symbol_order=352)
+
+std::operator& (_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+{
+  _Ios_Fmtflags D.85039;
+  _Ios_Fmtflags _3;
+
+  <bb 2> :
+  _3 = __a_1(D) & __b_2(D);
+
+  <bb 3> :
+<L0>:
+  return _3;
+
+}
+
+
+
+;; Function std::operator| (_ZStorSt13_Ios_FmtflagsS_, funcdef_no=1115, decl_uid=27233, cgraph_uid=352, symbol_order=353)
+
+std::operator| (_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+{
+  _Ios_Fmtflags D.85043;
+  _Ios_Fmtflags _3;
+
+  <bb 2> :
+  _3 = __a_1(D) | __b_2(D);
+
+  <bb 3> :
+<L0>:
+  return _3;
+
+}
+
+
+
+;; Function std::operator~ (_ZStcoSt13_Ios_Fmtflags, funcdef_no=1117, decl_uid=27246, cgraph_uid=354, symbol_order=355)
+
+std::operator~ (_Ios_Fmtflags __a)
+{
+  _Ios_Fmtflags D.85035;
+  _Ios_Fmtflags _2;
+
+  <bb 2> :
+  _2 = ~__a_1(D);
+
+  <bb 3> :
+<L0>:
+  return _2;
+
+}
+
+
+
+;; Function std::operator|= (_ZStoRRSt13_Ios_FmtflagsS_, funcdef_no=1118, decl_uid=27252, cgraph_uid=355, symbol_order=356)
+
+std::operator|= (_Ios_Fmtflags & __a, _Ios_Fmtflags __b)
+{
+  const _Ios_Fmtflags & D.85041;
+  _Ios_Fmtflags _1;
+  _Ios_Fmtflags _2;
+  const _Ios_Fmtflags & _8;
+
+  <bb 2> :
+  _1 = *__a_4(D);
+  _2 = std::operator| (_1, __b_5(D));
+  *__a_4(D) = _2;
+  _8 = __a_4(D);
+
+  <bb 3> :
+<L0>:
+  return _8;
+
+}
+
+
+
+;; Function std::operator&= (_ZStaNRSt13_Ios_FmtflagsS_, funcdef_no=1119, decl_uid=27256, cgraph_uid=356, symbol_order=357)
+
+std::operator&= (_Ios_Fmtflags & __a, _Ios_Fmtflags __b)
+{
+  const _Ios_Fmtflags & D.85037;
+  _Ios_Fmtflags _1;
+  _Ios_Fmtflags _2;
+  const _Ios_Fmtflags & _8;
+
+  <bb 2> :
+  _1 = *__a_4(D);
+  _2 = std::operator& (_1, __b_5(D));
+  *__a_4(D) = _2;
+  _8 = __a_4(D);
+
+  <bb 3> :
+<L0>:
+  return _8;
+
+}
+
+
+
+;; Function std::ios_base::setf (_ZNSt8ios_base4setfESt13_Ios_FmtflagsS0_, funcdef_no=1148, decl_uid=27593, cgraph_uid=385, symbol_order=386)
+
+std::ios_base::setf (struct ios_base * const this, fmtflags __fmtfl, fmtflags __mask)
+{
+  fmtflags __old;
+  fmtflags D.85033;
+  _Ios_Fmtflags _1;
+  fmtflags * _2;
+  _Ios_Fmtflags _3;
+  fmtflags * _4;
+  fmtflags _14;
+
+  <bb 2> :
+  __old_7 = this_6(D)->_M_flags;
+  _1 = std::operator~ (__mask_8(D));
+  _2 = &this_6(D)->_M_flags;
+  std::operator&= (_2, _1);
+  _3 = std::operator& (__fmtfl_11(D), __mask_8(D));
+  _4 = &this_6(D)->_M_flags;
+  std::operator|= (_4, _3);
+  _14 = __old_7;
+
+  <bb 3> :
+<L0>:
+  return _14;
+
+}
+
+
+
+;; Function std::left (_ZSt4leftRSt8ios_base, funcdef_no=1173, decl_uid=27765, cgraph_uid=410, symbol_order=411)
+
+std::left (struct ios_base & __base)
+{
+  struct ios_base & D.85045;
+  struct ios_base & _4;
+
+  <bb 2> :
+  std::ios_base::setf (__base_2(D), 32, 176);
+  _4 = __base_2(D);
+
+  <bb 3> :
+<L0>:
+  return _4;
+
+}
+
+
+
+;; Function std::right (_ZSt5rightRSt8ios_base, funcdef_no=1174, decl_uid=27768, cgraph_uid=411, symbol_order=412)
+
+std::right (struct ios_base & __base)
+{
+  struct ios_base & D.85031;
+  struct ios_base & _4;
+
+  <bb 2> :
+  std::ios_base::setf (__base_2(D), 128, 176);
+  _4 = __base_2(D);
+
+  <bb 3> :
+<L0>:
+  return _4;
+
+}
+
+
+
+;; Function std::setw (_ZSt4setwi, funcdef_no=2103, decl_uid=48156, cgraph_uid=468, symbol_order=471)
+
+std::setw (int __n)
+{
+  struct _Setw D.85051;
+
+  <bb 2> :
+  D.85051._M_n = __n_2(D);
+
+  <bb 3> :
+<L0>:
+  return D.85051;
+
+}
+
+
+
+;; Function Matrix::Matrix (_ZN6MatrixC2Emm, funcdef_no=2705, decl_uid=57908, cgraph_uid=699, symbol_order=703)
+
+Matrix::Matrix (struct Matrix * const this, size_t M, size_t N)
+{
+  void * D.85574;
+  struct allocator_type D.57972;
+  struct vector * _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  long unsigned int _4;
+  struct vector * _5;
+
+  <bb 2> :
+  MEM[(struct  &)this_7(D)] ={v} {CLOBBER};
+  this_7(D)->num_rows_ = M_9(D);
+  this_7(D)->num_cols_ = N_11(D);
+  _1 = &this_7(D)->storage_;
+  std::allocator<double>::allocator (&D.57972);
+  _2 = this_7(D)->num_rows_;
+  _3 = this_7(D)->num_cols_;
+  _4 = _2 * _3;
+  std::vector<double>::vector (_1, _4, &D.57972);
+
+  <bb 3> :
+  std::allocator<double>::~allocator (&D.57972);
+  D.57972 ={v} {CLOBBER};
+  return;
+
+  <bb 4> :
+<L0>:
+  std::allocator<double>::~allocator (&D.57972);
+  _18 = __builtin_eh_pointer (2);
+  __builtin_unwind_resume (_18);
+
+}
+
+
+
+;; Function std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_impl::~_Vector_impl (_ZNSt12_Vector_baseImSaImEE12_Vector_implD2Ev, funcdef_no=2814, decl_uid=61341, cgraph_uid=731, symbol_order=735)
+
+std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_impl::~_Vector_impl (struct _Vector_impl * const this)
+{
+  <bb 2> :
+  std::allocator<long unsigned int>::~allocator (this_2(D));
+  MEM[(struct  &)this_2(D)] ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_base (_ZNSt12_Vector_baseImSaImEEC2Ev, funcdef_no=2816, decl_uid=61399, cgraph_uid=734, symbol_order=738)
+
+std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_base (struct _Vector_base * const this)
+{
+  struct _Vector_impl * _1;
+  struct _Vector_impl * _2;
+
+  <bb 2> :
+  _1 = &this_3(D)->_M_impl;
+  std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_impl::_Vector_impl (_1);
+  return;
+
+}
+
+
+
+;; Function std::vector<long unsigned int>::vector (_ZNSt6vectorImSaImEEC2Ev, funcdef_no=2818, decl_uid=61932, cgraph_uid=737, symbol_order=741)
+
+std::vector<long unsigned int>::vector (struct vector * const this)
+{
+  struct _Vector_base * _1;
+  struct _Vector_base * _2;
+
+  <bb 2> :
+  _1 = &this_3(D)->D.61940;
+  std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_base (_1);
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<double, std::allocator<double> >::_Vector_impl::~_Vector_impl (_ZNSt12_Vector_baseIdSaIdEE12_Vector_implD2Ev, funcdef_no=2823, decl_uid=57258, cgraph_uid=740, symbol_order=744)
+
+std::_Vector_base<double, std::allocator<double> >::_Vector_impl::~_Vector_impl (struct _Vector_impl * const this)
+{
+  <bb 2> :
+  std::allocator<double>::~allocator (this_2(D));
+  MEM[(struct  &)this_2(D)] ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<double, std::allocator<double> >::_Vector_base (_ZNSt12_Vector_baseIdSaIdEEC2Ev, funcdef_no=2825, decl_uid=57316, cgraph_uid=743, symbol_order=747)
+
+std::_Vector_base<double, std::allocator<double> >::_Vector_base (struct _Vector_base * const this)
+{
+  struct _Vector_impl * _1;
+  struct _Vector_impl * _2;
+
+  <bb 2> :
+  _1 = &this_3(D)->_M_impl;
+  std::_Vector_base<double, std::allocator<double> >::_Vector_impl::_Vector_impl (_1);
+  return;
+
+}
+
+
+
+;; Function std::vector<double>::vector (_ZNSt6vectorIdSaIdEEC2Ev, funcdef_no=2827, decl_uid=57893, cgraph_uid=746, symbol_order=750)
+
+std::vector<double>::vector (struct vector * const this)
+{
+  struct _Vector_base * _1;
+  struct _Vector_base * _2;
+
+  <bb 2> :
+  _1 = &this_3(D)->D.57901;
+  std::_Vector_base<double, std::allocator<double> >::_Vector_base (_1);
+  return;
+
+}
+
+
+
+;; Function COOMatrix::COOMatrix (_ZN9COOMatrixC2Emm, funcdef_no=2829, decl_uid=61949, cgraph_uid=749, symbol_order=753)
+
+COOMatrix::COOMatrix (struct COOMatrix * const this, size_t M, size_t N)
+{
+  struct vector * _1;
+  struct vector * _2;
+  struct vector * _3;
+  struct vector * _4;
+  struct vector * _5;
+  struct vector * _6;
+
+  <bb 2> :
+  MEM[(struct  &)this_8(D)] ={v} {CLOBBER};
+  this_8(D)->num_rows_ = M_10(D);
+  this_8(D)->num_cols_ = N_12(D);
+  _1 = &this_8(D)->row_indices_;
+  std::vector<long unsigned int>::vector (_1);
+  _2 = &this_8(D)->col_indices_;
+  std::vector<long unsigned int>::vector (_2);
+  _3 = &this_8(D)->storage_;
+  std::vector<double>::vector (_3);
+  return;
+
+}
+
+
+
+;; Function COOMatrix::num_nonzeros (_ZNK9COOMatrix12num_nonzerosEv, funcdef_no=2836, decl_uid=60900, cgraph_uid=756, symbol_order=760)
+
+COOMatrix::num_nonzeros (const struct COOMatrix * const this)
+{
+  size_t D.85263;
+  const struct vector * _1;
+  size_t _5;
+
+  <bb 2> :
+  _1 = &this_2(D)->storage_;
+  _5 = std::vector<double>::size (_1);
+
+  <bb 3> :
+<L0>:
+  return _5;
+
+}
+
+
+
+;; Function CSRMatrix::CSRMatrix (_ZN9CSRMatrixC2Emm, funcdef_no=3271, decl_uid=67169, cgraph_uid=942, symbol_order=946)
+
+CSRMatrix::CSRMatrix (struct CSRMatrix * const this, size_t M, size_t N)
+{
+  void * D.85577;
+  const value_type D.67237;
+  struct allocator_type D.67238;
+  struct vector * _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  struct vector * _4;
+  struct vector * _5;
+  struct vector * _6;
+  struct vector * _7;
+  struct vector * _8;
+
+  <bb 2> :
+  MEM[(struct  &)this_10(D)] ={v} {CLOBBER};
+  this_10(D)->is_open = 0;
+  this_10(D)->num_rows_ = M_13(D);
+  this_10(D)->num_cols_ = N_15(D);
+  _1 = &this_10(D)->row_indices_;
+  std::allocator<long unsigned int>::allocator (&D.67238);
+  D.67237 = 0;
+  _2 = this_10(D)->num_rows_;
+  _3 = _2 + 1;
+  std::vector<long unsigned int>::vector (_1, _3, &D.67237, &D.67238);
+
+  <bb 3> :
+  D.67237 ={v} {CLOBBER};
+  std::allocator<long unsigned int>::~allocator (&D.67238);
+  D.67238 ={v} {CLOBBER};
+  _4 = &this_10(D)->col_indices_;
+  std::vector<long unsigned int>::vector (_4);
+  _5 = &this_10(D)->storage_;
+  std::vector<double>::vector (_5);
+  return;
+
+  <bb 4> :
+<L1>:
+  D.67237 ={v} {CLOBBER};
+  std::allocator<long unsigned int>::~allocator (&D.67238);
+  _27 = __builtin_eh_pointer (2);
+  __builtin_unwind_resume (_27);
+
+}
+
+
+
+;; Function CSCMatrix::CSCMatrix (_ZN9CSCMatrixC2Emm, funcdef_no=3285, decl_uid=67482, cgraph_uid=956, symbol_order=960)
+
+CSCMatrix::CSCMatrix (struct CSCMatrix * const this, size_t M, size_t N)
+{
+  void * D.85579;
+  const value_type D.67496;
+  struct allocator_type D.67497;
+  struct vector * _1;
+  long unsigned int _2;
+  long unsigned int _3;
+  struct vector * _4;
+  struct vector * _5;
+  struct vector * _6;
+  struct vector * _7;
+  struct vector * _8;
+
+  <bb 2> :
+  MEM[(struct  &)this_10(D)] ={v} {CLOBBER};
+  this_10(D)->is_open = 0;
+  this_10(D)->num_rows_ = M_13(D);
+  this_10(D)->num_cols_ = N_15(D);
+  _1 = &this_10(D)->col_indices_;
+  std::allocator<long unsigned int>::allocator (&D.67497);
+  D.67496 = 0;
+  _2 = this_10(D)->num_cols_;
+  _3 = _2 + 1;
+  std::vector<long unsigned int>::vector (_1, _3, &D.67496, &D.67497);
+
+  <bb 3> :
+  D.67496 ={v} {CLOBBER};
+  std::allocator<long unsigned int>::~allocator (&D.67497);
+  D.67497 ={v} {CLOBBER};
+  _4 = &this_10(D)->row_indices_;
+  std::vector<long unsigned int>::vector (_4);
+  _5 = &this_10(D)->storage_;
+  std::vector<double>::vector (_5);
+  return;
+
+  <bb 4> :
+<L1>:
+  D.67496 ={v} {CLOBBER};
+  std::allocator<long unsigned int>::~allocator (&D.67497);
+  _27 = __builtin_eh_pointer (2);
+  __builtin_unwind_resume (_27);
+
+}
+
+
+
+;; Function std::chrono::duration<long int, std::ratio<1, 1000000000> >::count (_ZNKSt6chrono8durationIlSt5ratioILl1ELl1000000000EEE5countEv, funcdef_no=3390, decl_uid=74006, cgraph_uid=1001, symbol_order=1005)
+
+std::chrono::duration<long int, std::ratio<1, 1000000000> >::count (const struct duration * const this)
+{
+  rep D.85349;
+  rep _3;
+
+  <bb 2> :
+  _3 = this_2(D)->__r;
+
+  <bb 3> :
+<L0>:
+  return _3;
+
+}
+
+
+
+;; Function std::chrono::duration<long int, std::ratio<1, 1000000000> >::duration<long int> (_ZNSt6chrono8durationIlSt5ratioILl1ELl1000000000EEEC1IlvEERKT_, funcdef_no=3395, decl_uid=74376, cgraph_uid=1007, symbol_order=1011)
+
+std::chrono::duration<long int, std::ratio<1, 1000000000> >::duration<long int> (struct duration * const this, const long int & __rep)
+{
+  long int _1;
+
+  <bb 2> :
+  MEM[(struct  &)this_3(D)] ={v} {CLOBBER};
+  _1 = *__rep_5(D);
+  this_3(D)->__r = _1;
+  return;
+
+}
+
+
+
+;; Function Timer::start (_ZN5Timer5startEv, funcdef_no=3413, decl_uid=76738, cgraph_uid=1018, symbol_order=1022)
+
+Timer::start (struct Timer * const this)
+{
+  struct time_t D.85328;
+  struct time_t * _1;
+
+  <bb 2> :
+  this_3(D)->startTime = std::chrono::_V2::system_clock::now ();
+  _1 = &this_3(D)->startTime;
+  D.85328 = MEM[(const struct time_point &)_1];
+
+  <bb 3> :
+<L0>:
+  return D.85328;
+
+}
+
+
+
+;; Function Timer::stop (_ZN5Timer4stopEv, funcdef_no=3414, decl_uid=76740, cgraph_uid=1019, symbol_order=1023)
+
+Timer::stop (struct Timer * const this)
+{
+  struct time_t D.85330;
+  struct time_t * _1;
+
+  <bb 2> :
+  this_3(D)->stopTime = std::chrono::_V2::system_clock::now ();
+  _1 = &this_3(D)->stopTime;
+  D.85330 = MEM[(const struct time_point &)_1];
+
+  <bb 3> :
+<L0>:
+  return D.85330;
+
+}
+
+
+
+;; Function Timer::elapsed (_ZN5Timer7elapsedEv, funcdef_no=3415, decl_uid=76742, cgraph_uid=1020, symbol_order=1024)
+
+Timer::elapsed (struct Timer * const this)
+{
+  struct type D.76806;
+  struct __enable_if_is_duration D.76816;
+  double D.85332;
+  struct time_t * _1;
+  struct time_t * _2;
+  long int _3;
+  double _9;
+
+  <bb 2> :
+  _1 = &this_4(D)->startTime;
+  _2 = &this_4(D)->stopTime;
+  D.76806 = std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > > (_2, _1);
+  D.76816 = std::chrono::duration_cast<std::chrono::duration<long int, std::ratio<1, 1000> >, long int, std::ratio<1, 1000000000> > (&D.76806);
+  _3 = std::chrono::duration<long int, std::ratio<1, 1000> >::count (&D.76816);
+  _9 = (double) _3;
+  D.76816 ={v} {CLOBBER};
+  D.76806 ={v} {CLOBBER};
+
+  <bb 3> :
+<L2>:
+  return _9;
+
+}
+
+
+
+;; Function header (_Z6headerRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE, funcdef_no=3428, decl_uid=76935, cgraph_uid=1033, symbol_order=1037)
+
+header (const struct string & msg)
+{
+  struct __ostream_type & D.85030;
+  struct basic_ostream & D.85029;
+  struct __ostream_type & D.85028;
+  struct basic_ostream & D.85027;
+  struct __ostream_type & D.85026;
+  struct basic_ostream & D.85025;
+  struct __ostream_type & D.85024;
+  struct basic_ostream & D.85023;
+  struct __ostream_type & D.85022;
+  struct basic_ostream & D.85021;
+  struct __ostream_type & D.85020;
+  struct basic_ostream & D.85019;
+  struct __ostream_type & D.85018;
+  struct basic_ostream & D.85017;
+  struct basic_ostream & D.85016;
+  struct __ostream_type & D.85015;
+  struct basic_ostream & D.85014;
+  bool D.85013;
+  struct basic_ostream & os_;
+  struct _Setw D.85012;
+  struct _Setw D.85011;
+  struct _Setw D.85010;
+  struct _Setw D.85009;
+  struct _Setw D.85008;
+  struct _Setw D.85007;
+  struct _Setw D.85006;
+  struct _Setw D.85004;
+  bool retval.0;
+  struct basic_ostream & _1;
+  struct __ostream_type & _2;
+  struct basic_ostream & _3;
+  struct basic_ostream & _4;
+  struct __ostream_type & _5;
+  struct basic_ostream & _6;
+  struct __ostream_type & _7;
+  struct basic_ostream & _8;
+  struct __ostream_type & _9;
+  struct basic_ostream & _10;
+  struct __ostream_type & _11;
+  struct basic_ostream & _12;
+  struct __ostream_type & _13;
+  struct basic_ostream & _14;
+  struct __ostream_type & _15;
+  struct basic_ostream & _16;
+  struct __ostream_type & _17;
+  bool _23;
+  bool retval.0_24;
+  struct basic_ostream & _27;
+  struct __ostream_type & _29;
+  struct basic_ostream & _31;
+  struct basic_ostream & _35;
+  struct __ostream_type & _37;
+  struct basic_ostream & _41;
+  struct __ostream_type & _43;
+  struct basic_ostream & _47;
+  struct __ostream_type & _49;
+  struct basic_ostream & _53;
+  struct __ostream_type & _55;
+  struct basic_ostream & _59;
+  struct __ostream_type & _61;
+  struct basic_ostream & _65;
+  struct __ostream_type & _67;
+  struct basic_ostream & _71;
+  struct __ostream_type & _73;
+
+  <bb 2> :
+  os__19 = &cout;
+  _23 = std::operator!=<char, std::char_traits<char>, std::allocator<char> > (msg_21(D), "");
+  retval.0_24 = _23;
+  if (retval.0_24 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  D.85004 = std::setw (12);
+  _27 = std::operator<< <char, std::char_traits<char> > (os__19, D.85004);
+  _1 = _27;
+  _29 = std::basic_ostream<char>::operator<< (_1, left);
+  _2 = _29;
+  _31 = std::operator<< <char, std::char_traits<char>, std::allocator<char> > (_2, msg_21(D));
+  _3 = _31;
+  std::basic_ostream<char>::operator<< (_3, endl);
+
+  <bb 4> :
+  D.85006 = std::setw (8);
+  _35 = std::operator<< <char, std::char_traits<char> > (os__19, D.85006);
+  _4 = _35;
+  _37 = std::basic_ostream<char>::operator<< (_4, right);
+  _5 = _37;
+  std::operator<< <std::char_traits<char> > (_5, "N(Grid)");
+  D.85007 = std::setw (10);
+  _41 = std::operator<< <char, std::char_traits<char> > (os__19, D.85007);
+  _6 = _41;
+  _43 = std::basic_ostream<char>::operator<< (_6, right);
+  _7 = _43;
+  std::operator<< <std::char_traits<char> > (_7, "N(Matrix)");
+  D.85008 = std::setw (12);
+  _47 = std::operator<< <char, std::char_traits<char> > (os__19, D.85008);
+  _8 = _47;
+  _49 = std::basic_ostream<char>::operator<< (_8, right);
+  _9 = _49;
+  std::operator<< <std::char_traits<char> > (_9, "NNZ");
+  D.85009 = std::setw (8);
+  _53 = std::operator<< <char, std::char_traits<char> > (os__19, D.85009);
+  _10 = _53;
+  _55 = std::basic_ostream<char>::operator<< (_10, right);
+  _11 = _55;
+  std::operator<< <std::char_traits<char> > (_11, "NRHS");
+  D.85010 = std::setw (12);
+  _59 = std::operator<< <char, std::char_traits<char> > (os__19, D.85010);
+  _12 = _59;
+  _61 = std::basic_ostream<char>::operator<< (_12, right);
+  _13 = _61;
+  std::operator<< <std::char_traits<char> > (_13, "COO");
+  D.85011 = std::setw (12);
+  _65 = std::operator<< <char, std::char_traits<char> > (os__19, D.85011);
+  _14 = _65;
+  _67 = std::basic_ostream<char>::operator<< (_14, right);
+  _15 = _67;
+  std::operator<< <std::char_traits<char> > (_15, "CSR");
+  D.85012 = std::setw (12);
+  _71 = std::operator<< <char, std::char_traits<char> > (os__19, D.85012);
+  _16 = _71;
+  _73 = std::basic_ostream<char>::operator<< (_16, right);
+  _17 = _73;
+  std::operator<< <std::char_traits<char> > (_17, "CSC");
+  std::basic_ostream<char>::operator<< (os__19, endl);
+  return;
+
+}
+
+
+
+;; Function Gflops_sec (_Z10Gflops_secmmmd, funcdef_no=3429, decl_uid=76995, cgraph_uid=1034, symbol_order=1038)
+
+Gflops_sec (size_t nnz, size_t nrhs, size_t trials, double msec)
+{
+  double sec;
+  double Gflops;
+  double D.85055;
+  long unsigned int _1;
+  double _2;
+  double _3;
+  double _4;
+  double _5;
+  double _6;
+  double _13;
+  double _14;
+
+  <bb 2> :
+  _1 = trials_7(D) * nrhs_8(D);
+  _2 = (double) _1;
+  _3 = (double) nnz_9(D);
+  _4 = _3 * 2.0e+0;
+  _5 = _2 * _4;
+  Gflops_10 = _5 / 1.0e+9;
+  sec_12 = msec_11(D) / 1.0e+3;
+  if (sec_12 == 0.0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  _14 = 0.0;
+  // predicted unlikely by early return (on trees) predictor.
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  _13 = Gflops_10 / sec_12;
+
+  <bb 5> :
+  # _6 = PHI <_14(3), _13(4)>
+<L2>:
+  return _6;
+
+}
+
+
+
+;; Function log (_Z3logmmmmSt6vectorIdSaIdEE, funcdef_no=3430, decl_uid=77004, cgraph_uid=1035, symbol_order=1039)
+
+log (size_t n, size_t nnz, size_t nrhs, size_t ntrials, struct vector & restrict ms_times)
+{
+  struct __ostream_type & D.85074;
+  struct basic_ostream & D.85073;
+  struct __ostream_type & D.85072;
+  struct basic_ostream & D.85071;
+  struct __ostream_type & D.85070;
+  struct basic_ostream & D.85069;
+  struct __ostream_type & D.85068;
+  struct basic_ostream & D.85067;
+  struct __ostream_type & D.85066;
+  struct basic_ostream & D.85065;
+  size_t i;
+  struct basic_ostream & os_;
+  struct _Setw D.85064;
+  bool retval.1;
+  struct _Setw D.85060;
+  struct _Setw D.85059;
+  struct _Setw D.85058;
+  struct _Setw D.85057;
+  struct basic_ostream & _1;
+  struct __ostream_type & _2;
+  struct basic_ostream & _3;
+  struct __ostream_type & _4;
+  long unsigned int _5;
+  struct basic_ostream & _6;
+  struct __ostream_type & _7;
+  struct basic_ostream & _8;
+  struct __ostream_type & _9;
+  long unsigned int _10;
+  struct basic_ostream & _11;
+  struct __ostream_type & _12;
+  value_type & _13;
+  double _14;
+  double _15;
+  struct basic_ostream & _22;
+  struct __ostream_type & _24;
+  struct basic_ostream & _29;
+  struct __ostream_type & _31;
+  struct basic_ostream & _35;
+  struct __ostream_type & _37;
+  struct basic_ostream & _42;
+  struct __ostream_type & _44;
+  bool retval.1_50;
+  struct basic_ostream & _54;
+  struct __ostream_type & _56;
+
+  <bb 2> :
+  os__18 = &cout;
+  D.85057 = std::setw (8);
+  _22 = std::operator<< <char, std::char_traits<char> > (os__18, D.85057);
+  _1 = _22;
+  _24 = std::basic_ostream<char>::operator<< (_1, right);
+  _2 = _24;
+  std::basic_ostream<char>::operator<< (_2, n_25(D));
+  D.85058 = std::setw (10);
+  _29 = std::operator<< <char, std::char_traits<char> > (os__18, D.85058);
+  _3 = _29;
+  _31 = std::basic_ostream<char>::operator<< (_3, right);
+  _4 = _31;
+  _5 = n_25(D) * n_25(D);
+  std::basic_ostream<char>::operator<< (_4, _5);
+  D.85059 = std::setw (12);
+  _35 = std::operator<< <char, std::char_traits<char> > (os__18, D.85059);
+  _6 = _35;
+  _37 = std::basic_ostream<char>::operator<< (_6, right);
+  _7 = _37;
+  std::basic_ostream<char>::operator<< (_7, nnz_38(D));
+  D.85060 = std::setw (8);
+  _42 = std::operator<< <char, std::char_traits<char> > (os__18, D.85060);
+  _8 = _42;
+  _44 = std::basic_ostream<char>::operator<< (_8, right);
+  _9 = _44;
+  std::basic_ostream<char>::operator<< (_9, nrhs_45(D));
+  i_47 = 0;
+
+  <bb 3> :
+  # i_16 = PHI <i_47(2), i_61(4)>
+  _10 = std::vector<double>::size (ms_times_48(D));
+  retval.1_50 = i_16 < _10;
+  if (retval.1_50 != 0)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  D.85064 = std::setw (12);
+  _54 = std::operator<< <char, std::char_traits<char> > (os__18, D.85064);
+  _11 = _54;
+  _56 = std::basic_ostream<char>::operator<< (_11, right);
+  _12 = _56;
+  _13 = std::vector<double>::operator[] (ms_times_48(D), i_16);
+  _14 = *_13;
+  _15 = Gflops_sec (nnz_38(D), nrhs_45(D), ntrials_58(D), _14);
+  std::basic_ostream<char>::operator<< (_12, _15);
+  i_61 = i_16 + 1;
+  goto <bb 3>; [INV]
+
+  <bb 5> :
+  std::basic_ostream<char>::operator<< (os__18, endl);
+  return;
+
+}
+
+
+
+;; Function num_trials (_Z10num_trialsm, funcdef_no=3431, decl_uid=77017, cgraph_uid=1036, symbol_order=1040)
+
+num_trials (size_t nnz)
+{
+  double N_1k;
+  size_t D.85080;
+  double _1;
+  double _2;
+  long unsigned int _3;
+  size_t _6;
+
+  <bb 2> :
+  _1 = (double) nnz_4(D);
+  _2 = 6.6e+7 / _1;
+  N_1k_5 = ceil (_2);
+  _3 = (long unsigned int) N_1k_5;
+  _6 = _3 + 3;
+
+  <bb 3> :
+<L0>:
+  return _6;
+
+}
+
+
+
+;; Function Matrix::~Matrix (_ZN6MatrixD2Ev, funcdef_no=3434, decl_uid=77048, cgraph_uid=1038, symbol_order=1042)
+
+Matrix::~Matrix (struct Matrix * const this)
+{
+  struct vector * _1;
+
+  <bb 2> :
+  _1 = &this_2(D)->storage_;
+  std::vector<double>::~vector (_1);
+  MEM[(struct  &)this_2(D)] ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function COOMatrix::~COOMatrix (_ZN9COOMatrixD2Ev, funcdef_no=3437, decl_uid=77084, cgraph_uid=1041, symbol_order=1045)
+
+COOMatrix::~COOMatrix (struct COOMatrix * const this)
+{
+  struct vector * _1;
+  struct vector * _2;
+  struct vector * _3;
+
+  <bb 2> :
+  _1 = &this_4(D)->storage_;
+  std::vector<double>::~vector (_1);
+  _2 = &this_4(D)->col_indices_;
+  std::vector<long unsigned int>::~vector (_2);
+  _3 = &this_4(D)->row_indices_;
+  std::vector<long unsigned int>::~vector (_3);
+  MEM[(struct  &)this_4(D)] ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function CSRMatrix::~CSRMatrix (_ZN9CSRMatrixD2Ev, funcdef_no=3440, decl_uid=77160, cgraph_uid=1044, symbol_order=1048)
+
+CSRMatrix::~CSRMatrix (struct CSRMatrix * const this)
+{
+  struct vector * _1;
+  struct vector * _2;
+  struct vector * _3;
+
+  <bb 2> :
+  _1 = &this_4(D)->storage_;
+  std::vector<double>::~vector (_1);
+  _2 = &this_4(D)->col_indices_;
+  std::vector<long unsigned int>::~vector (_2);
+  _3 = &this_4(D)->row_indices_;
+  std::vector<long unsigned int>::~vector (_3);
+  MEM[(struct  &)this_4(D)] ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function CSCMatrix::~CSCMatrix (_ZN9CSCMatrixD2Ev, funcdef_no=3443, decl_uid=77180, cgraph_uid=1047, symbol_order=1051)
+
+CSCMatrix::~CSCMatrix (struct CSCMatrix * const this)
+{
+  struct vector * _1;
+  struct vector * _2;
+  struct vector * _3;
+
+  <bb 2> :
+  _1 = &this_4(D)->storage_;
+  std::vector<double>::~vector (_1);
+  _2 = &this_4(D)->row_indices_;
+  std::vector<long unsigned int>::~vector (_2);
+  _3 = &this_4(D)->col_indices_;
+  std::vector<long unsigned int>::~vector (_3);
+  MEM[(struct  &)this_4(D)] ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function main (main, funcdef_no=3432, decl_uid=77025, cgraph_uid=1049, symbol_order=1053)
+
+main (int argc, char * * argv)
+{
+  void * D.85594;
+  void * D.85593;
+  void * D.85592;
+  void * D.85591;
+  void * D.85590;
+  double D.85116;
+  double D.85115;
+  double D.85114;
+  long int D.85103;
+  long int D.85098;
+  size_t i;
+  size_t i;
+  size_t i;
+  struct CSCMatrix ACSC;
+  struct CSRMatrix ACSR;
+  size_t ntrials;
+  size_t nnz;
+  struct COOMatrix ACOO;
+  struct Matrix C;
+  struct Matrix B;
+  size_t size;
+  struct vector ms_times;
+  struct Timer t;
+  size_t nrhs;
+  size_t points_max;
+  int D.85096;
+  struct vector D.77193;
+  struct time_t D.77192;
+  struct time_t D.77190;
+  struct time_t D.77172;
+  struct time_t D.77170;
+  struct time_t D.77152;
+  struct time_t D.77150;
+  struct allocator_type D.77039;
+  struct allocator D.77034;
+  const struct string D.77035;
+  struct allocator D.77032;
+  const struct string D.77033;
+  struct allocator D.77030;
+  const struct string D.77031;
+  char * * _1;
+  char * _2;
+  long int _3;
+  char * * _4;
+  char * _5;
+  long int _6;
+  long unsigned int _7;
+  long unsigned int _8;
+  long unsigned int _9;
+  long unsigned int _10;
+  long unsigned int _11;
+  value_type & _12;
+  double _13;
+  long unsigned int _14;
+  long unsigned int _15;
+  value_type & _16;
+  double _17;
+  long unsigned int _18;
+  long unsigned int _19;
+  value_type & _20;
+  double _21;
+  long int _52;
+  long int _65;
+  double _106;
+  double _117;
+  double _128;
+  int _158;
+
+  <bb 2> :
+  points_max_44 = 2048;
+  nrhs_45 = 1;
+  if (argc_46(D) > 1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 3> :
+  std::allocator<char>::allocator (&D.77030);
+  _1 = argv_49(D) + 8;
+  _2 = *_1;
+  std::__cxx11::basic_string<char>::basic_string (&D.77031, _2, &D.77030);
+
+  <bb 4> :
+  _52 = std::__cxx11::stol (&D.77031, 0B, 10);
+
+  <bb 5> :
+  _3 = _52;
+  nrhs_53 = (size_t) _3;
+  std::__cxx11::basic_string<char>::~basic_string (&D.77031);
+  D.77031 ={v} {CLOBBER};
+  std::allocator<char>::~allocator (&D.77030);
+  D.77030 ={v} {CLOBBER};
+
+  <bb 6> :
+  # nrhs_23 = PHI <nrhs_45(2), nrhs_53(5)>
+  if (argc_46(D) > 2)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 10>; [INV]
+
+  <bb 7> :
+  std::allocator<char>::allocator (&D.77032);
+  _4 = argv_49(D) + 16;
+  _5 = *_4;
+  std::__cxx11::basic_string<char>::basic_string (&D.77033, _5, &D.77032);
+
+  <bb 8> :
+  _65 = std::__cxx11::stol (&D.77033, 0B, 10);
+
+  <bb 9> :
+  _6 = _65;
+  points_max_66 = (size_t) _6;
+  std::__cxx11::basic_string<char>::~basic_string (&D.77033);
+  D.77033 ={v} {CLOBBER};
+  std::allocator<char>::~allocator (&D.77032);
+  D.77032 ={v} {CLOBBER};
+
+  <bb 10> :
+  # points_max_22 = PHI <points_max_44(6), points_max_66(9)>
+  std::allocator<char>::allocator (&D.77034);
+  std::__cxx11::basic_string<char>::basic_string (&D.77035, "", &D.77034);
+
+  <bb 11> :
+  header (&D.77035);
+
+  <bb 12> :
+  std::__cxx11::basic_string<char>::~basic_string (&D.77035);
+  D.77035 ={v} {CLOBBER};
+  std::allocator<char>::~allocator (&D.77034);
+  D.77034 ={v} {CLOBBER};
+  t.startTime.__d.__r = 0;
+  t.stopTime.__d.__r = 0;
+  std::allocator<double>::allocator (&D.77039);
+  std::vector<double>::vector (&ms_times, 3, &D.77039);
+
+  <bb 13> :
+  std::allocator<double>::~allocator (&D.77039);
+  D.77039 ={v} {CLOBBER};
+  size_88 = 64;
+
+  <bb 14> :
+  # size_24 = PHI <size_88(13), size_144(41)>
+  if (size_24 > points_max_22)
+    goto <bb 42>; [INV]
+  else
+    goto <bb 15>; [INV]
+
+  <bb 15> :
+  _7 = size_24 * size_24;
+  Matrix::Matrix (&B, _7, nrhs_23);
+
+  <bb 16> :
+  _8 = size_24 * size_24;
+  Matrix::Matrix (&C, _8, nrhs_23);
+
+  <bb 17> :
+  randomize (&B);
+
+  <bb 18> :
+  randomize (&C);
+
+  <bb 19> :
+  _9 = size_24 * size_24;
+  _10 = size_24 * size_24;
+  COOMatrix::COOMatrix (&ACOO, _10, _9);
+  piscetize (&ACOO, size_24, size_24);
+
+  <bb 20> :
+  nnz_96 = COOMatrix::num_nonzeros (&ACOO);
+  _11 = nnz_96 * nrhs_23;
+  ntrials_98 = num_trials (_11);
+  D.77150 = Timer::start (&t);
+  i_100 = 0;
+
+  <bb 21> :
+  # i_25 = PHI <i_100(20), i_102(23)>
+  if (i_25 >= ntrials_98)
+    goto <bb 24>; [INV]
+  else
+    goto <bb 22>; [INV]
+
+  <bb 22> :
+  mult (&ACOO, &B, &C);
+
+  <bb 23> :
+  i_102 = i_25 + 1;
+  goto <bb 21>; [INV]
+
+  <bb 24> :
+  D.77152 = Timer::stop (&t);
+  _12 = std::vector<double>::operator[] (&ms_times, 0);
+  _106 = Timer::elapsed (&t);
+
+  <bb 25> :
+  _13 = _106;
+  *_12 = _13;
+  _14 = size_24 * size_24;
+  _15 = size_24 * size_24;
+  CSRMatrix::CSRMatrix (&ACSR, _15, _14);
+
+  <bb 26> :
+  piscetize (&ACSR, size_24, size_24);
+
+  <bb 27> :
+  D.77170 = Timer::start (&t);
+  i_111 = 0;
+
+  <bb 28> :
+  # i_26 = PHI <i_111(27), i_113(30)>
+  if (i_26 >= ntrials_98)
+    goto <bb 31>; [INV]
+  else
+    goto <bb 29>; [INV]
+
+  <bb 29> :
+  mult (&ACSR, &B, &C);
+
+  <bb 30> :
+  i_113 = i_26 + 1;
+  goto <bb 28>; [INV]
+
+  <bb 31> :
+  D.77172 = Timer::stop (&t);
+  _16 = std::vector<double>::operator[] (&ms_times, 1);
+  _117 = Timer::elapsed (&t);
+
+  <bb 32> :
+  _17 = _117;
+  *_16 = _17;
+  _18 = size_24 * size_24;
+  _19 = size_24 * size_24;
+  CSCMatrix::CSCMatrix (&ACSC, _19, _18);
+
+  <bb 33> :
+  piscetize (&ACSC, size_24, size_24);
+
+  <bb 34> :
+  D.77190 = Timer::start (&t);
+  i_122 = 0;
+
+  <bb 35> :
+  # i_27 = PHI <i_122(34), i_124(37)>
+  if (i_27 >= ntrials_98)
+    goto <bb 38>; [INV]
+  else
+    goto <bb 36>; [INV]
+
+  <bb 36> :
+  mult (&ACSC, &B, &C);
+
+  <bb 37> :
+  i_124 = i_27 + 1;
+  goto <bb 35>; [INV]
+
+  <bb 38> :
+  D.77192 = Timer::stop (&t);
+  _20 = std::vector<double>::operator[] (&ms_times, 2);
+  _128 = Timer::elapsed (&t);
+
+  <bb 39> :
+  _21 = _128;
+  *_20 = _21;
+  std::vector<double>::vector (&D.77193, &ms_times);
+
+  <bb 40> :
+  log (size_24, nnz_96, nrhs_23, ntrials_98, &D.77193);
+
+  <bb 41> :
+  std::vector<double>::~vector (&D.77193);
+  D.77193 ={v} {CLOBBER};
+  CSCMatrix::~CSCMatrix (&ACSC);
+  CSRMatrix::~CSRMatrix (&ACSR);
+  COOMatrix::~COOMatrix (&ACOO);
+  Matrix::~Matrix (&C);
+  Matrix::~Matrix (&B);
+  B ={v} {CLOBBER};
+  C ={v} {CLOBBER};
+  ACOO ={v} {CLOBBER};
+  ACSR ={v} {CLOBBER};
+  ACSC ={v} {CLOBBER};
+  size_144 = size_24 * 2;
+  goto <bb 14>; [INV]
+
+  <bb 42> :
+  _158 = 0;
+  std::vector<double>::~vector (&ms_times);
+  t ={v} {CLOBBER};
+  ms_times ={v} {CLOBBER};
+
+  <bb 43> :
+<L20>:
+  return _158;
+
+  <bb 44> :
+<L21>:
+  std::__cxx11::basic_string<char>::~basic_string (&D.77031);
+  __builtin_eh_copy_values (3, 5);
+
+  <bb 45> :
+<L23>:
+  D.77031 ={v} {CLOBBER};
+  std::allocator<char>::~allocator (&D.77030);
+  _43 = __builtin_eh_pointer (3);
+  __builtin_unwind_resume (_43);
+
+  <bb 46> :
+<L25>:
+  std::__cxx11::basic_string<char>::~basic_string (&D.77033);
+  __builtin_eh_copy_values (11, 13);
+
+  <bb 47> :
+<L27>:
+  D.77033 ={v} {CLOBBER};
+  std::allocator<char>::~allocator (&D.77032);
+  _163 = __builtin_eh_pointer (11);
+  __builtin_unwind_resume (_163);
+
+  <bb 48> :
+<L29>:
+  std::__cxx11::basic_string<char>::~basic_string (&D.77035);
+  __builtin_eh_copy_values (19, 21);
+
+  <bb 49> :
+<L31>:
+  D.77035 ={v} {CLOBBER};
+  std::allocator<char>::~allocator (&D.77034);
+  _167 = __builtin_eh_pointer (19);
+  __builtin_unwind_resume (_167);
+
+  <bb 50> :
+<L33>:
+  std::allocator<double>::~allocator (&D.77039);
+  _74 = __builtin_eh_pointer (27);
+  __builtin_unwind_resume (_74);
+
+  <bb 51> :
+<L35>:
+  std::vector<double>::~vector (&D.77193);
+  __builtin_eh_copy_values (37, 39);
+
+  <bb 52> :
+<L37>:
+  D.77193 ={v} {CLOBBER};
+  CSCMatrix::~CSCMatrix (&ACSC);
+  __builtin_eh_copy_values (36, 37);
+
+  <bb 53> :
+<L38>:
+  CSRMatrix::~CSRMatrix (&ACSR);
+  __builtin_eh_copy_values (35, 36);
+
+  <bb 54> :
+<L39>:
+  COOMatrix::~COOMatrix (&ACOO);
+  __builtin_eh_copy_values (34, 35);
+
+  <bb 55> :
+<L40>:
+  Matrix::~Matrix (&C);
+  __builtin_eh_copy_values (33, 34);
+
+  <bb 56> :
+<L41>:
+  Matrix::~Matrix (&B);
+  __builtin_eh_copy_values (31, 33);
+
+  <bb 57> :
+<L42>:
+  B ={v} {CLOBBER};
+  C ={v} {CLOBBER};
+  ACOO ={v} {CLOBBER};
+  ACSR ={v} {CLOBBER};
+  ACSC ={v} {CLOBBER};
+  std::vector<double>::~vector (&ms_times);
+  _61 = __builtin_eh_pointer (31);
+  __builtin_unwind_resume (_61);
+
+}
+
+
+
+;; Function __gnu_cxx::__stoa(_TRet (*)(const _CharT*, _CharT**, _Base ...), const char*, const _CharT*, std::size_t*, _Base ...) [with _TRet = long int; _Ret = long int; _CharT = char; _Base = {int}]::_Save_errno::_Save_errno (_ZZN9__gnu_cxx6__stoaIllcJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_EN11_Save_errnoC2Ev, funcdef_no=3457, decl_uid=77364, cgraph_uid=1061, symbol_order=1065)
+
+__gnu_cxx::__stoa(_TRet (*)(const _CharT*, _CharT**, _Base ...), const char*, const _CharT*, std::size_t*, _Base ...) [with _TRet = long int; _Ret = long int; _CharT = char; _Base = {int}]::_Save_errno::_Save_errno (struct _Save_errno * const this)
+{
+  int * _1;
+  int _2;
+  int * _3;
+
+  <bb 2> :
+  MEM[(struct  &)this_5(D)] ={v} {CLOBBER};
+  _1 = __errno_location ();
+  _2 = *_1;
+  this_5(D)->_M_errno = _2;
+  _3 = __errno_location ();
+  *_3 = 0;
+  return;
+
+}
+
+
+
+;; Function __gnu_cxx::__stoa(_TRet (*)(const _CharT*, _CharT**, _Base ...), const char*, const _CharT*, std::size_t*, _Base ...) [with _TRet = long int; _Ret = long int; _CharT = char; _Base = {int}]::_Save_errno::~_Save_errno (_ZZN9__gnu_cxx6__stoaIllcJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_EN11_Save_errnoD2Ev, funcdef_no=3460, decl_uid=77369, cgraph_uid=1064, symbol_order=1068)
+
+__gnu_cxx::__stoa(_TRet (*)(const _CharT*, _CharT**, _Base ...), const char*, const _CharT*, std::size_t*, _Base ...) [with _TRet = long int; _Ret = long int; _CharT = char; _Base = {int}]::_Save_errno::~_Save_errno (struct _Save_errno * const this)
+{
+  int * _1;
+  int _2;
+  int * _3;
+  int _4;
+
+  <bb 2> :
+  _1 = __errno_location ();
+  _2 = *_1;
+  if (_2 == 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  _3 = __errno_location ();
+  _4 = this_7(D)->_M_errno;
+  *_3 = _4;
+
+  <bb 4> :
+  MEM[(struct  &)this_7(D)] ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function __gnu_cxx::__stoa(_TRet (*)(const _CharT*, _CharT**, _Base ...), const char*, const _CharT*, std::size_t*, _Base ...) [with _TRet = long int; _Ret = long int; _CharT = char; _Base = {int}]::_Range_chk::_S_chk (_ZZN9__gnu_cxx6__stoaIllcJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_EN10_Range_chk6_S_chkElSt17integral_constantIbLb0EE, funcdef_no=3462, decl_uid=77395, cgraph_uid=1066, symbol_order=1070)
+
+__gnu_cxx::__stoa(_TRet (*)(const _CharT*, _CharT**, _Base ...), const char*, const _CharT*, std::size_t*, _Base ...) [with _TRet = long int; _Ret = long int; _CharT = char; _Base = {int}]::_Range_chk::_S_chk (long int D.77396, struct false_type D.77397)
+{
+  bool D.85153;
+  bool _1;
+
+  <bb 2> :
+  _1 = 0;
+
+  <bb 3> :
+<L0>:
+  return _1;
+
+}
+
+
+
+;; Function __gnu_cxx::__stoa<long int> (_ZN9__gnu_cxx6__stoaIllcJiEEET0_PFT_PKT1_PPS3_DpT2_EPKcS5_PmS9_, funcdef_no=3455, decl_uid=20038, cgraph_uid=1068, symbol_order=1072)
+
+__gnu_cxx::__stoa<long int> (long int (*<T337e>) (const char *, char * *, int) __convf, const char * __name, const char * __str, size_t * __idx, int __base#0)
+{
+  void * D.85597;
+  const long int D.85148;
+  const long int __tmp;
+  const struct _Save_errno __save_errno;
+  char * __endptr;
+  long int __ret;
+  long int D.85146;
+  struct integral_constant D.85140;
+  struct is_same D.77440;
+  struct integral_constant D.77450;
+  bool iftmp.4;
+  bool retval.3;
+  char * __endptr.2_1;
+  int * _2;
+  int _3;
+  struct is_same * _4;
+  bool _5;
+  char * __endptr.5_6;
+  long int _7;
+  long unsigned int _8;
+  bool iftmp.4_9;
+  const long int _20;
+  bool iftmp.4_23;
+  bool iftmp.4_24;
+  bool retval.3_25;
+  long int _30;
+
+  <bb 2> :
+  __gnu_cxx::__stoa(_TRet (*)(const _CharT*, _CharT**, _Base ...), const char*, const _CharT*, std::size_t*, _Base ...) [with _TRet = long int; _Ret = long int; _CharT = char; _Base = {int}]::_Save_errno::_Save_errno (&__save_errno);
+  _20 = __convf_16(D) (__str_17(D), &__endptr, __base#0_18(D));
+
+  <bb 3> :
+  __tmp_21 = _20;
+  __endptr.2_1 = __endptr;
+  if (__str_17(D) == __endptr.2_1)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  std::__throw_invalid_argument (__name_34(D));
+
+  <bb 5> :
+  _2 = __errno_location ();
+  _3 = *_2;
+  if (_3 == 34)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 6>; [INV]
+
+  <bb 6> :
+  _4 = &D.77440;
+  _5 = __gnu_cxx::__stoa(_TRet (*)(const _CharT*, _CharT**, _Base ...), const char*, const _CharT*, std::size_t*, _Base ...) [with _TRet = long int; _Ret = long int; _CharT = char; _Base = {int}]::_Range_chk::_S_chk (__tmp_21, D.85140);
+  if (_5 != 0)
+    goto <bb 7>; [INV]
+  else
+    goto <bb 8>; [INV]
+
+  <bb 7> :
+  iftmp.4_24 = 1;
+  goto <bb 9>; [INV]
+
+  <bb 8> :
+  iftmp.4_23 = 0;
+
+  <bb 9> :
+  # iftmp.4_9 = PHI <iftmp.4_24(7), iftmp.4_23(8)>
+  retval.3_25 = iftmp.4_9;
+  D.77440 ={v} {CLOBBER};
+  if (retval.3_25 != 0)
+    goto <bb 10>; [INV]
+  else
+    goto <bb 11>; [INV]
+
+  <bb 10> :
+  std::__throw_out_of_range (__name_34(D));
+
+  <bb 11> :
+  __ret_27 = __tmp_21;
+  if (__idx_28(D) != 0B)
+    goto <bb 12>; [INV]
+  else
+    goto <bb 13>; [INV]
+
+  <bb 12> :
+  __endptr.5_6 = __endptr;
+  _7 = __endptr.5_6 - __str_17(D);
+  _8 = (long unsigned int) _7;
+  *__idx_28(D) = _8;
+
+  <bb 13> :
+  _30 = __ret_27;
+  __gnu_cxx::__stoa(_TRet (*)(const _CharT*, _CharT**, _Base ...), const char*, const _CharT*, std::size_t*, _Base ...) [with _TRet = long int; _Ret = long int; _CharT = char; _Base = {int}]::_Save_errno::~_Save_errno (&__save_errno);
+  __endptr ={v} {CLOBBER};
+  __save_errno ={v} {CLOBBER};
+
+  <bb 14> :
+<L13>:
+  return _30;
+
+  <bb 15> :
+<L14>:
+  __gnu_cxx::__stoa(_TRet (*)(const _CharT*, _CharT**, _Base ...), const char*, const _CharT*, std::size_t*, _Base ...) [with _TRet = long int; _Ret = long int; _CharT = char; _Base = {int}]::_Save_errno::~_Save_errno (&__save_errno);
+  _38 = __builtin_eh_pointer (2);
+  __builtin_unwind_resume (_38);
+
+}
+
+
+
+;; Function std::allocator<double>::allocator (_ZNSaIdEC2Ev, funcdef_no=3696, decl_uid=56990, cgraph_uid=1301, symbol_order=1305)
+
+std::allocator<double>::allocator (struct allocator * const this)
+{
+  <bb 2> :
+  __gnu_cxx::new_allocator<double>::new_allocator (this_2(D));
+  return;
+
+}
+
+
+
+;; Function std::allocator<double>::~allocator (_ZNSaIdED2Ev, funcdef_no=3699, decl_uid=56995, cgraph_uid=1304, symbol_order=1308)
+
+std::allocator<double>::~allocator (struct allocator * const this)
+{
+  <bb 2> :
+  __gnu_cxx::new_allocator<double>::~new_allocator (this_2(D));
+  return;
+
+}
+
+
+
+;; Function std::vector<double>::vector (_ZNSt6vectorIdSaIdEEC2EmRKS0_, funcdef_no=3702, decl_uid=57881, cgraph_uid=1307, symbol_order=1311)
+
+std::vector<double>::vector (struct vector * const this, size_type __n, const struct allocator_type & __a)
+{
+  void * D.85599;
+  long unsigned int D.85198;
+  struct _Vector_base * _1;
+  long unsigned int _2;
+  struct _Vector_base * _3;
+  long unsigned int _10;
+
+  <bb 2> :
+  MEM[(struct  &)this_5(D)] ={v} {CLOBBER};
+  _1 = &this_5(D)->D.57901;
+  _10 = std::vector<double>::_S_check_init_len (__n_7(D), __a_8(D));
+  _2 = _10;
+  std::_Vector_base<double, std::allocator<double> >::_Vector_base (_1, _2, __a_8(D));
+  std::vector<double>::_M_default_initialize (this_5(D), __n_7(D));
+
+  <bb 3> :
+  return;
+
+  <bb 4> :
+<L0>:
+  _3 = &this_5(D)->D.57901;
+  std::_Vector_base<double, std::allocator<double> >::~_Vector_base (_3);
+  _14 = __builtin_eh_pointer (1);
+  __builtin_unwind_resume (_14);
+
+}
+
+
+
+;; Function std::vector<double>::~vector (_ZNSt6vectorIdSaIdEED2Ev, funcdef_no=3705, decl_uid=57898, cgraph_uid=1310, symbol_order=1314)
+
+std::vector<double>::~vector (struct vector * const this)
+{
+  struct _Vector_base * _1;
+  struct _Tp_alloc_type & _2;
+  double * _3;
+  double * _4;
+  struct _Vector_base * _5;
+
+  <bb 2> :
+  _1 = &this_6(D)->D.57901;
+  _2 = std::_Vector_base<double, std::allocator<double> >::_M_get_Tp_allocator (_1);
+  _3 = this_6(D)->D.57901._M_impl.D.57204._M_finish;
+  _4 = this_6(D)->D.57901._M_impl.D.57204._M_start;
+  std::_Destroy<double*, double> (_4, _3, _2);
+  _5 = &this_6(D)->D.57901;
+  std::_Vector_base<double, std::allocator<double> >::~_Vector_base (_5);
+  MEM[(struct  &)this_6(D)] ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function std::vector<double>::operator[] (_ZNSt6vectorIdSaIdEEixEm, funcdef_no=3707, decl_uid=57526, cgraph_uid=1312, symbol_order=1316)
+
+std::vector<double>::operator[] (struct vector * const this, size_type __n)
+{
+  value_type & D.85078;
+  double * _1;
+  long unsigned int _2;
+  value_type & _6;
+
+  <bb 2> :
+  _1 = this_4(D)->D.57901._M_impl.D.57204._M_start;
+  _2 = __n_5(D) * 8;
+  _6 = _1 + _2;
+
+  <bb 3> :
+<L0>:
+  return _6;
+
+}
+
+
+
+;; Function std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_impl::_Vector_impl (_ZNSt12_Vector_baseImSaImEE12_Vector_implC2Ev, funcdef_no=3714, decl_uid=61285, cgraph_uid=1319, symbol_order=1323)
+
+std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_impl::_Vector_impl (struct _Vector_impl * const this)
+{
+  struct _Vector_impl_data * _1;
+
+  <bb 2> :
+  MEM[(struct  &)this_3(D)] ={v} {CLOBBER};
+  std::allocator<long unsigned int>::allocator (this_3(D));
+  _1 = &this_3(D)->D.61287;
+  std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_impl_data::_Vector_impl_data (_1);
+  return;
+
+}
+
+
+
+;; Function std::allocator<long unsigned int>::~allocator (_ZNSaImED2Ev, funcdef_no=3717, decl_uid=61078, cgraph_uid=1322, symbol_order=1326)
+
+std::allocator<long unsigned int>::~allocator (struct allocator * const this)
+{
+  <bb 2> :
+  __gnu_cxx::new_allocator<long unsigned int>::~new_allocator (this_2(D));
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::~_Vector_base (_ZNSt12_Vector_baseImSaImEED2Ev, funcdef_no=3720, decl_uid=61404, cgraph_uid=1325, symbol_order=1329)
+
+std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::~_Vector_base (struct _Vector_base * const this)
+{
+  long unsigned int * _1;
+  long unsigned int * _2;
+  long int _3;
+  long int _4;
+  long unsigned int _5;
+  long unsigned int * _6;
+  struct _Vector_impl * _7;
+
+  <bb 2> :
+  _1 = this_9(D)->_M_impl.D.61287._M_end_of_storage;
+  _2 = this_9(D)->_M_impl.D.61287._M_start;
+  _3 = _1 - _2;
+  _4 = _3 /[ex] 8;
+  _5 = (long unsigned int) _4;
+  _6 = this_9(D)->_M_impl.D.61287._M_start;
+  std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_M_deallocate (this_9(D), _6, _5);
+  _7 = &this_9(D)->_M_impl;
+  std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_impl::~_Vector_impl (_7);
+  MEM[(struct  &)this_9(D)] ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function std::vector<long unsigned int>::~vector (_ZNSt6vectorImSaImEED2Ev, funcdef_no=3723, decl_uid=61937, cgraph_uid=1328, symbol_order=1332)
+
+std::vector<long unsigned int>::~vector (struct vector * const this)
+{
+  struct _Vector_base * _1;
+  struct _Tp_alloc_type & _2;
+  long unsigned int * _3;
+  long unsigned int * _4;
+  struct _Vector_base * _5;
+
+  <bb 2> :
+  _1 = &this_6(D)->D.61940;
+  _2 = std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_M_get_Tp_allocator (_1);
+  _3 = this_6(D)->D.61940._M_impl.D.61287._M_finish;
+  _4 = this_6(D)->D.61940._M_impl.D.61287._M_start;
+  std::_Destroy<long unsigned int*, long unsigned int> (_4, _3, _2);
+  _5 = &this_6(D)->D.61940;
+  std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::~_Vector_base (_5);
+  MEM[(struct  &)this_6(D)] ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<double, std::allocator<double> >::_Vector_impl::_Vector_impl (_ZNSt12_Vector_baseIdSaIdEE12_Vector_implC2Ev, funcdef_no=3726, decl_uid=57202, cgraph_uid=1331, symbol_order=1335)
+
+std::_Vector_base<double, std::allocator<double> >::_Vector_impl::_Vector_impl (struct _Vector_impl * const this)
+{
+  struct _Vector_impl_data * _1;
+
+  <bb 2> :
+  MEM[(struct  &)this_3(D)] ={v} {CLOBBER};
+  std::allocator<double>::allocator (this_3(D));
+  _1 = &this_3(D)->D.57204;
+  std::_Vector_base<double, std::allocator<double> >::_Vector_impl_data::_Vector_impl_data (_1);
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<double, std::allocator<double> >::~_Vector_base (_ZNSt12_Vector_baseIdSaIdEED2Ev, funcdef_no=3729, decl_uid=57321, cgraph_uid=1334, symbol_order=1338)
+
+std::_Vector_base<double, std::allocator<double> >::~_Vector_base (struct _Vector_base * const this)
+{
+  double * _1;
+  double * _2;
+  long int _3;
+  long int _4;
+  long unsigned int _5;
+  double * _6;
+  struct _Vector_impl * _7;
+
+  <bb 2> :
+  _1 = this_9(D)->_M_impl.D.57204._M_end_of_storage;
+  _2 = this_9(D)->_M_impl.D.57204._M_start;
+  _3 = _1 - _2;
+  _4 = _3 /[ex] 8;
+  _5 = (long unsigned int) _4;
+  _6 = this_9(D)->_M_impl.D.57204._M_start;
+  std::_Vector_base<double, std::allocator<double> >::_M_deallocate (this_9(D), _6, _5);
+  _7 = &this_9(D)->_M_impl;
+  std::_Vector_base<double, std::allocator<double> >::_Vector_impl::~_Vector_impl (_7);
+  MEM[(struct  &)this_9(D)] ={v} {CLOBBER};
+  return;
+
+}
+
+
+
+;; Function std::vector<double>::size (_ZNKSt6vectorIdSaIdEE4sizeEv, funcdef_no=3741, decl_uid=57506, cgraph_uid=1346, symbol_order=1350)
+
+std::vector<double>::size (const struct vector * const this)
+{
+  size_type D.85075;
+  double * _1;
+  double * _2;
+  long int _3;
+  long int _4;
+  size_type _7;
+
+  <bb 2> :
+  _1 = this_6(D)->D.57901._M_impl.D.57204._M_finish;
+  _2 = this_6(D)->D.57901._M_impl.D.57204._M_start;
+  _3 = _1 - _2;
+  _4 = _3 /[ex] 8;
+  _7 = (size_type) _4;
+
+  <bb 3> :
+<L0>:
+  return _7;
+
+}
+
+
+
+;; Function std::allocator<long unsigned int>::allocator (_ZNSaImEC2Ev, funcdef_no=3749, decl_uid=61073, cgraph_uid=1354, symbol_order=1358)
+
+std::allocator<long unsigned int>::allocator (struct allocator * const this)
+{
+  <bb 2> :
+  __gnu_cxx::new_allocator<long unsigned int>::new_allocator (this_2(D));
+  return;
+
+}
+
+
+
+;; Function std::vector<long unsigned int>::vector (_ZNSt6vectorImSaImEEC2EmRKmRKS0_, funcdef_no=3752, decl_uid=61911, cgraph_uid=1357, symbol_order=1361)
+
+std::vector<long unsigned int>::vector (struct vector * const this, size_type __n, const value_type & __value, const struct allocator_type & __a)
+{
+  void * D.85600;
+  long unsigned int D.85268;
+  struct _Vector_base * _1;
+  long unsigned int _2;
+  struct _Vector_base * _3;
+  long unsigned int _10;
+
+  <bb 2> :
+  MEM[(struct  &)this_5(D)] ={v} {CLOBBER};
+  _1 = &this_5(D)->D.61940;
+  _10 = std::vector<long unsigned int>::_S_check_init_len (__n_7(D), __a_8(D));
+  _2 = _10;
+  std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_base (_1, _2, __a_8(D));
+  std::vector<long unsigned int>::_M_fill_initialize (this_5(D), __n_7(D), __value_12(D));
+
+  <bb 3> :
+  return;
+
+  <bb 4> :
+<L0>:
+  _3 = &this_5(D)->D.61940;
+  std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::~_Vector_base (_3);
+  _15 = __builtin_eh_pointer (1);
+  __builtin_unwind_resume (_15);
+
+}
+
+
+
+;; Function std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::time_since_epoch (_ZNKSt6chrono10time_pointINS_3_V212system_clockENS_8durationIlSt5ratioILl1ELl1000000000EEEEE16time_since_epochEv, funcdef_no=3792, decl_uid=74439, cgraph_uid=1397, symbol_order=1401)
+
+std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::time_since_epoch (const struct time_point * const this)
+{
+  struct duration D.85341;
+
+  <bb 2> :
+  D.85341 = this_2(D)->__d;
+
+  <bb 3> :
+<L0>:
+  return D.85341;
+
+}
+
+
+
+;; Function std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > > (_ZNSt6chronomiINS_3_V212system_clockENS_8durationIlSt5ratioILl1ELl1000000000EEEES6_EENSt11common_typeIJT0_T1_EE4typeERKNS_10time_pointIT_S8_EERKNSC_ISD_S9_EE, funcdef_no=3820, decl_uid=76767, cgraph_uid=1425, symbol_order=1429)
+
+std::chrono::operator-<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> >, std::chrono::duration<long int, std::ratio<1, 1000000000> > > (const struct time_point & __lhs, const struct time_point & __rhs)
+{
+  struct duration D.81214;
+  struct duration D.81215;
+  struct type D.85337;
+
+  <bb 2> :
+  D.81215 = std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::time_since_epoch (__rhs_2(D));
+  D.81214 = std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >::time_since_epoch (__lhs_4(D));
+  D.85337 = std::chrono::operator-<long int, std::ratio<1, 1000000000>, long int, std::ratio<1, 1000000000> > (&D.81214, &D.81215);
+
+  <bb 3> :
+  D.81214 ={v} {CLOBBER};
+  D.81215 ={v} {CLOBBER};
+
+  <bb 4> :
+<L2>:
+  return D.85337;
+
+}
+
+
+
+;; Function std::chrono::duration_cast<std::chrono::duration<long int, std::ratio<1, 1000> >, long int, std::ratio<1, 1000000000> > (_ZNSt6chrono13duration_castINS_8durationIlSt5ratioILl1ELl1000EEEElS2_ILl1ELl1000000000EEEENSt9enable_ifIXsrNS_13__is_durationIT_EE5valueES8_E4typeERKNS1_IT0_T1_EE, funcdef_no=3821, decl_uid=76814, cgraph_uid=1426, symbol_order=1430)
+
+std::chrono::duration_cast<std::chrono::duration<long int, std::ratio<1, 1000> >, long int, std::ratio<1, 1000000000> > (const struct duration & __d)
+{
+  struct __enable_if_is_duration D.85351;
+
+  <bb 2> :
+  D.85351 = std::chrono::__duration_cast_impl<std::chrono::duration<long int, std::ratio<1, 1000> >, std::ratio<1, 1000000>, long int, true, false>::__cast<long int, std::ratio<1, 1000000000> > (__d_2(D));
+
+  <bb 3> :
+<L0>:
+  return D.85351;
+
+}
+
+
+
+;; Function std::chrono::duration<long int, std::ratio<1, 1000> >::count (_ZNKSt6chrono8durationIlSt5ratioILl1ELl1000EEE5countEv, funcdef_no=3822, decl_uid=76141, cgraph_uid=1427, symbol_order=1431)
+
+std::chrono::duration<long int, std::ratio<1, 1000> >::count (const struct duration * const this)
+{
+  rep D.85357;
+  rep _3;
+
+  <bb 2> :
+  _3 = this_2(D)->__r;
+
+  <bb 3> :
+<L0>:
+  return _3;
+
+}
+
+
+
+;; Function std::operator!=<char, std::char_traits<char>, std::allocator<char> > (_ZStneIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_, funcdef_no=3826, decl_uid=76899, cgraph_uid=1431, symbol_order=1435)
+
+std::operator!=<char, std::char_traits<char>, std::allocator<char> > (const struct basic_string & __lhs, const char * __rhs)
+{
+  bool D.85047;
+  bool _1;
+  bool _6;
+
+  <bb 2> :
+  _1 = std::operator==<char, std::char_traits<char>, std::allocator<char> > (__lhs_3(D), __rhs_4(D));
+  _6 = ~_1;
+
+  <bb 3> :
+<L0>:
+  return _6;
+
+}
+
+
+
+;; Function std::vector<double>::vector (_ZNSt6vectorIdSaIdEEC2ERKS1_, funcdef_no=3836, decl_uid=57864, cgraph_uid=1441, symbol_order=1445)
+
+std::vector<double>::vector (struct vector * const this, const struct vector & __x)
+{
+  void * D.85603;
+  void * D.85602;
+  double * D.85363;
+  struct __normal_iterator D.85360;
+  struct __normal_iterator D.85359;
+  struct allocator D.81454;
+  struct _Vector_base * _1;
+  const struct _Vector_base * _2;
+  const struct _Tp_alloc_type & _3;
+  long unsigned int _4;
+  struct _Vector_base * _5;
+  struct _Tp_alloc_type & _6;
+  double * _7;
+  double * _8;
+  struct _Vector_base * _9;
+  double * _24;
+
+  <bb 2> :
+  MEM[(struct  &)this_11(D)] ={v} {CLOBBER};
+  _1 = &this_11(D)->D.57901;
+  _2 = &__x_13(D)->D.57901;
+  _3 = std::_Vector_base<double, std::allocator<double> >::_M_get_Tp_allocator (_2);
+  D.81454 = __gnu_cxx::__alloc_traits<std::allocator<double>, double>::_S_select_on_copy (_3); [return slot optimization]
+  _4 = std::vector<double>::size (__x_13(D));
+  std::_Vector_base<double, std::allocator<double> >::_Vector_base (_1, _4, &D.81454);
+
+  <bb 3> :
+  std::allocator<double>::~allocator (&D.81454);
+  D.81454 ={v} {CLOBBER};
+  _5 = &this_11(D)->D.57901;
+  _6 = std::_Vector_base<double, std::allocator<double> >::_M_get_Tp_allocator (_5);
+  _7 = this_11(D)->D.57901._M_impl.D.57204._M_start;
+  D.85359 = std::vector<double>::end (__x_13(D));
+  D.85360 = std::vector<double>::begin (__x_13(D));
+  _24 = std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<const double*, std::vector<double> >, double*, double> (D.85360, D.85359, _7, _6);
+
+  <bb 4> :
+  _8 = _24;
+  this_11(D)->D.57901._M_impl.D.57204._M_finish = _8;
+  return;
+
+  <bb 5> :
+<L0>:
+  std::allocator<double>::~allocator (&D.81454);
+  _28 = __builtin_eh_pointer (2);
+  __builtin_unwind_resume (_28);
+
+  <bb 6> :
+<L2>:
+  _9 = &this_11(D)->D.57901;
+  std::_Vector_base<double, std::allocator<double> >::~_Vector_base (_9);
+  _29 = __builtin_eh_pointer (5);
+  __builtin_unwind_resume (_29);
+
+}
+
+
+
+;; Function __gnu_cxx::new_allocator<double>::new_allocator (_ZN9__gnu_cxx13new_allocatorIdEC2Ev, funcdef_no=3944, decl_uid=56920, cgraph_uid=1549, symbol_order=1553)
+
+__gnu_cxx::new_allocator<double>::new_allocator (struct new_allocator * const this)
+{
+  <bb 2> :
+  return;
+
+}
+
+
+
+;; Function __gnu_cxx::new_allocator<double>::~new_allocator (_ZN9__gnu_cxx13new_allocatorIdED2Ev, funcdef_no=3947, decl_uid=56925, cgraph_uid=1552, symbol_order=1556)
+
+__gnu_cxx::new_allocator<double>::~new_allocator (struct new_allocator * const this)
+{
+  <bb 2> :
+  return;
+
+}
+
+
+
+;; Function std::vector<double>::_S_check_init_len (_ZNSt6vectorIdSaIdEE17_S_check_init_lenEmRKS0_, funcdef_no=3949, decl_uid=57752, cgraph_uid=1554, symbol_order=1558)
+
+std::vector<double>::_S_check_init_len (size_type __n, const struct allocator_type & __a)
+{
+  size_type D.85203;
+  struct _Tp_alloc_type D.81807;
+  bool retval.13;
+  long unsigned int _1;
+  bool retval.13_7;
+  size_type _10;
+
+  <bb 2> :
+  std::allocator<double>::allocator (&D.81807, __a_3(D));
+  _1 = std::vector<double>::_S_max_size (&D.81807);
+  retval.13_7 = __n_6(D) > _1;
+  std::allocator<double>::~allocator (&D.81807);
+  D.81807 ={v} {CLOBBER};
+  if (retval.13_7 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  std::__throw_length_error ("cannot create std::vector larger than max_size()");
+
+  <bb 4> :
+  _10 = __n_6(D);
+
+  <bb 5> :
+<L2>:
+  return _10;
+
+}
+
+
+
+;; Function std::_Vector_base<double, std::allocator<double> >::_Vector_base (_ZNSt12_Vector_baseIdSaIdEEC2EmRKS0_, funcdef_no=3951, decl_uid=57298, cgraph_uid=1556, symbol_order=1560)
+
+std::_Vector_base<double, std::allocator<double> >::_Vector_base (struct _Vector_base * const this, size_t __n, const struct allocator_type & __a)
+{
+  void * D.85608;
+  struct _Vector_impl * _1;
+  struct _Vector_impl * _2;
+
+  <bb 2> :
+  MEM[(struct  &)this_4(D)] ={v} {CLOBBER};
+  _1 = &this_4(D)->_M_impl;
+  std::_Vector_base<double, std::allocator<double> >::_Vector_impl::_Vector_impl (_1, __a_6(D));
+  std::_Vector_base<double, std::allocator<double> >::_M_create_storage (this_4(D), __n_8(D));
+
+  <bb 3> :
+  return;
+
+  <bb 4> :
+<L0>:
+  _2 = &this_4(D)->_M_impl;
+  std::_Vector_base<double, std::allocator<double> >::_Vector_impl::~_Vector_impl (_2);
+  _11 = __builtin_eh_pointer (1);
+  __builtin_unwind_resume (_11);
+
+}
+
+
+
+;; Function std::vector<double>::_M_default_initialize (_ZNSt6vectorIdSaIdEE21_M_default_initializeEm, funcdef_no=3953, decl_uid=57635, cgraph_uid=1558, symbol_order=1562)
+
+std::vector<double>::_M_default_initialize (struct vector * const this, size_type __n)
+{
+  double * D.85234;
+  struct _Vector_base * _1;
+  struct _Tp_alloc_type & _2;
+  double * _3;
+  double * _4;
+  double * _10;
+
+  <bb 2> :
+  _1 = &this_5(D)->D.57901;
+  _2 = std::_Vector_base<double, std::allocator<double> >::_M_get_Tp_allocator (_1);
+  _3 = this_5(D)->D.57901._M_impl.D.57204._M_start;
+  _10 = std::__uninitialized_default_n_a<double*, long unsigned int, double> (_3, __n_8(D), _2);
+  _4 = _10;
+  this_5(D)->D.57901._M_impl.D.57204._M_finish = _4;
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<double, std::allocator<double> >::_M_get_Tp_allocator (_ZNSt12_Vector_baseIdSaIdEE19_M_get_Tp_allocatorEv, funcdef_no=3954, decl_uid=57094, cgraph_uid=1559, symbol_order=1563)
+
+std::_Vector_base<double, std::allocator<double> >::_M_get_Tp_allocator (struct _Vector_base * const this)
+{
+  struct _Tp_alloc_type & D.85235;
+  struct _Tp_alloc_type & _2;
+
+  <bb 2> :
+  _2 = &this_1(D)->_M_impl;
+
+  <bb 3> :
+<L0>:
+  return _2;
+
+}
+
+
+
+;; Function std::_Destroy<double*, double> (_ZSt8_DestroyIPddEvT_S1_RSaIT0_E, funcdef_no=3955, decl_uid=78930, cgraph_uid=1560, symbol_order=1564)
+
+std::_Destroy<double*, double> (double * __first, double * __last, struct allocator & D.78933)
+{
+  <bb 2> :
+  std::_Destroy<double*> (__first_2(D), __last_3(D));
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_impl_data::_Vector_impl_data (_ZNSt12_Vector_baseImSaImEE17_Vector_impl_dataC2Ev, funcdef_no=3957, decl_uid=61236, cgraph_uid=1562, symbol_order=1566)
+
+std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_impl_data::_Vector_impl_data (struct _Vector_impl_data * const this)
+{
+  <bb 2> :
+  MEM[(struct  &)this_2(D)] ={v} {CLOBBER};
+  this_2(D)->_M_start = 0B;
+  this_2(D)->_M_finish = 0B;
+  this_2(D)->_M_end_of_storage = 0B;
+  return;
+
+}
+
+
+
+;; Function __gnu_cxx::new_allocator<long unsigned int>::~new_allocator (_ZN9__gnu_cxx13new_allocatorImED2Ev, funcdef_no=3960, decl_uid=61008, cgraph_uid=1565, symbol_order=1569)
+
+__gnu_cxx::new_allocator<long unsigned int>::~new_allocator (struct new_allocator * const this)
+{
+  <bb 2> :
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_M_deallocate (_ZNSt12_Vector_baseImSaImEE13_M_deallocateEPmm, funcdef_no=3962, decl_uid=61292, cgraph_uid=1567, symbol_order=1571)
+
+std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_M_deallocate (struct _Vector_base * const this, long unsigned int * __p, size_t __n)
+{
+  struct _Vector_impl * _1;
+
+  <bb 2> :
+  if (__p_3(D) != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  _1 = &this_5(D)->_M_impl;
+  std::allocator_traits<std::allocator<long unsigned int> >::deallocate (_1, __p_3(D), __n_6(D));
+
+  <bb 4> :
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_M_get_Tp_allocator (_ZNSt12_Vector_baseImSaImEE19_M_get_Tp_allocatorEv, funcdef_no=3963, decl_uid=61177, cgraph_uid=1568, symbol_order=1572)
+
+std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_M_get_Tp_allocator (struct _Vector_base * const this)
+{
+  struct _Tp_alloc_type & D.85301;
+  struct _Tp_alloc_type & _2;
+
+  <bb 2> :
+  _2 = &this_1(D)->_M_impl;
+
+  <bb 3> :
+<L0>:
+  return _2;
+
+}
+
+
+
+;; Function std::_Destroy<long unsigned int*, long unsigned int> (_ZSt8_DestroyIPmmEvT_S1_RSaIT0_E, funcdef_no=3964, decl_uid=78986, cgraph_uid=1569, symbol_order=1573)
+
+std::_Destroy<long unsigned int*, long unsigned int> (long unsigned int * __first, long unsigned int * __last, struct allocator & D.78989)
+{
+  <bb 2> :
+  std::_Destroy<long unsigned int*> (__first_2(D), __last_3(D));
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<double, std::allocator<double> >::_Vector_impl_data::_Vector_impl_data (_ZNSt12_Vector_baseIdSaIdEE17_Vector_impl_dataC2Ev, funcdef_no=3966, decl_uid=57153, cgraph_uid=1571, symbol_order=1575)
+
+std::_Vector_base<double, std::allocator<double> >::_Vector_impl_data::_Vector_impl_data (struct _Vector_impl_data * const this)
+{
+  <bb 2> :
+  MEM[(struct  &)this_2(D)] ={v} {CLOBBER};
+  this_2(D)->_M_start = 0B;
+  this_2(D)->_M_finish = 0B;
+  this_2(D)->_M_end_of_storage = 0B;
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<double, std::allocator<double> >::_M_deallocate (_ZNSt12_Vector_baseIdSaIdEE13_M_deallocateEPdm, funcdef_no=3968, decl_uid=57209, cgraph_uid=1573, symbol_order=1577)
+
+std::_Vector_base<double, std::allocator<double> >::_M_deallocate (struct _Vector_base * const this, double * __p, size_t __n)
+{
+  struct _Vector_impl * _1;
+
+  <bb 2> :
+  if (__p_3(D) != 0B)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  _1 = &this_5(D)->_M_impl;
+  std::allocator_traits<std::allocator<double> >::deallocate (_1, __p_3(D), __n_6(D));
+
+  <bb 4> :
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_M_allocate (_ZNSt12_Vector_baseImSaImEE11_M_allocateEm, funcdef_no=3979, decl_uid=61289, cgraph_uid=1584, symbol_order=1588)
+
+std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_M_allocate (struct _Vector_base * const this, size_t __n)
+{
+  long unsigned int * D.85290;
+  long unsigned int * iftmp.18;
+  long unsigned int * D.85284;
+  struct _Vector_impl * _1;
+  long unsigned int * iftmp.18_2;
+  long unsigned int * iftmp.18_5;
+  long unsigned int * _9;
+  long unsigned int * iftmp.18_10;
+  long unsigned int * _11;
+
+  <bb 2> :
+  if (__n_4(D) != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  _1 = &this_7(D)->_M_impl;
+  _9 = std::allocator_traits<std::allocator<long unsigned int> >::allocate (_1, __n_4(D));
+  iftmp.18_10 = _9;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  iftmp.18_5 = 0B;
+
+  <bb 5> :
+  # iftmp.18_2 = PHI <iftmp.18_10(3), iftmp.18_5(4)>
+  _11 = iftmp.18_2;
+
+  <bb 6> :
+<L3>:
+  return _11;
+
+}
+
+
+
+;; Function std::_Vector_base<double, std::allocator<double> >::_M_allocate (_ZNSt12_Vector_baseIdSaIdEE11_M_allocateEm, funcdef_no=3985, decl_uid=57206, cgraph_uid=1590, symbol_order=1594)
+
+std::_Vector_base<double, std::allocator<double> >::_M_allocate (struct _Vector_base * const this, size_t __n)
+{
+  double * D.85224;
+  double * iftmp.14;
+  double * D.85218;
+  struct _Vector_impl * _1;
+  double * iftmp.14_2;
+  double * iftmp.14_5;
+  double * _9;
+  double * iftmp.14_10;
+  double * _11;
+
+  <bb 2> :
+  if (__n_4(D) != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  _1 = &this_7(D)->_M_impl;
+  _9 = std::allocator_traits<std::allocator<double> >::allocate (_1, __n_4(D));
+  iftmp.14_10 = _9;
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  iftmp.14_5 = 0B;
+
+  <bb 5> :
+  # iftmp.14_2 = PHI <iftmp.14_10(3), iftmp.14_5(4)>
+  _11 = iftmp.14_2;
+
+  <bb 6> :
+<L3>:
+  return _11;
+
+}
+
+
+
+;; Function __gnu_cxx::new_allocator<long unsigned int>::new_allocator (_ZN9__gnu_cxx13new_allocatorImEC2Ev, funcdef_no=3993, decl_uid=61003, cgraph_uid=1598, symbol_order=1602)
+
+__gnu_cxx::new_allocator<long unsigned int>::new_allocator (struct new_allocator * const this)
+{
+  <bb 2> :
+  return;
+
+}
+
+
+
+;; Function std::vector<long unsigned int>::_S_check_init_len (_ZNSt6vectorImSaImEE17_S_check_init_lenEmRKS0_, funcdef_no=3995, decl_uid=61793, cgraph_uid=1600, symbol_order=1604)
+
+std::vector<long unsigned int>::_S_check_init_len (size_type __n, const struct allocator_type & __a)
+{
+  size_type D.85273;
+  struct _Tp_alloc_type D.82109;
+  bool retval.17;
+  long unsigned int _1;
+  bool retval.17_7;
+  size_type _10;
+
+  <bb 2> :
+  std::allocator<long unsigned int>::allocator (&D.82109, __a_3(D));
+  _1 = std::vector<long unsigned int>::_S_max_size (&D.82109);
+  retval.17_7 = __n_6(D) > _1;
+  std::allocator<long unsigned int>::~allocator (&D.82109);
+  D.82109 ={v} {CLOBBER};
+  if (retval.17_7 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  std::__throw_length_error ("cannot create std::vector larger than max_size()");
+
+  <bb 4> :
+  _10 = __n_6(D);
+
+  <bb 5> :
+<L2>:
+  return _10;
+
+}
+
+
+
+;; Function std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_base (_ZNSt12_Vector_baseImSaImEEC2EmRKS0_, funcdef_no=3997, decl_uid=61381, cgraph_uid=1602, symbol_order=1606)
+
+std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_base (struct _Vector_base * const this, size_t __n, const struct allocator_type & __a)
+{
+  void * D.85610;
+  struct _Vector_impl * _1;
+  struct _Vector_impl * _2;
+
+  <bb 2> :
+  MEM[(struct  &)this_4(D)] ={v} {CLOBBER};
+  _1 = &this_4(D)->_M_impl;
+  std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_impl::_Vector_impl (_1, __a_6(D));
+  std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_M_create_storage (this_4(D), __n_8(D));
+
+  <bb 3> :
+  return;
+
+  <bb 4> :
+<L0>:
+  _2 = &this_4(D)->_M_impl;
+  std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_impl::~_Vector_impl (_2);
+  _11 = __builtin_eh_pointer (1);
+  __builtin_unwind_resume (_11);
+
+}
+
+
+
+;; Function std::vector<long unsigned int>::_M_fill_initialize (_ZNSt6vectorImSaImEE18_M_fill_initializeEmRKm, funcdef_no=3999, decl_uid=61690, cgraph_uid=1604, symbol_order=1608)
+
+std::vector<long unsigned int>::_M_fill_initialize (struct vector * const this, size_type __n, const value_type & __value)
+{
+  long unsigned int * D.85300;
+  struct _Vector_base * _1;
+  struct _Tp_alloc_type & _2;
+  long unsigned int * _3;
+  long unsigned int * _4;
+  long unsigned int * _11;
+
+  <bb 2> :
+  _1 = &this_5(D)->D.61940;
+  _2 = std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_M_get_Tp_allocator (_1);
+  _3 = this_5(D)->D.61940._M_impl.D.61287._M_start;
+  _11 = std::__uninitialized_fill_n_a<long unsigned int*, long unsigned int, long unsigned int, long unsigned int> (_3, __n_8(D), __value_9(D), _2);
+  _4 = _11;
+  this_5(D)->D.61940._M_impl.D.61287._M_finish = _4;
+  return;
+
+}
+
+
+
+;; Function std::chrono::operator-<long int, std::ratio<1, 1000000000>, long int, std::ratio<1, 1000000000> > (_ZNSt6chronomiIlSt5ratioILl1ELl1000000000EElS2_EENSt11common_typeIJNS_8durationIT_T0_EENS4_IT1_T2_EEEE4typeERKS7_RKSA_, funcdef_no=4040, decl_uid=81216, cgraph_uid=1645, symbol_order=1649)
+
+std::chrono::operator-<long int, std::ratio<1, 1000000000>, long int, std::ratio<1, 1000000000> > (const struct duration & __lhs, const struct duration & __rhs)
+{
+  struct duration D.82449;
+  struct duration D.82447;
+  const long int D.82450;
+  struct __cd D.82451;
+  struct type D.85343;
+  long int _1;
+  long int _2;
+  long int _3;
+
+  <bb 2> :
+  D.82447 = *__lhs_5(D);
+  _1 = std::chrono::duration<long int, std::ratio<1, 1000000000> >::count (&D.82447);
+  D.82449 = *__rhs_8(D);
+  _2 = std::chrono::duration<long int, std::ratio<1, 1000000000> >::count (&D.82449);
+  _3 = _1 - _2;
+  D.82450 = _3;
+  std::chrono::duration<long int, std::ratio<1, 1000000000> >::duration<long int> (&D.82451, &D.82450);
+  D.85343 = D.82451;
+  D.82451 ={v} {CLOBBER};
+  D.82450 ={v} {CLOBBER};
+  D.82449 ={v} {CLOBBER};
+  D.82447 ={v} {CLOBBER};
+
+  <bb 3> :
+<L4>:
+  return D.85343;
+
+}
+
+
+
+;; Function std::chrono::__duration_cast_impl<std::chrono::duration<long int, std::ratio<1, 1000> >, std::ratio<1, 1000000>, long int, true, false>::__cast<long int, std::ratio<1, 1000000000> > (_ZNSt6chrono20__duration_cast_implINS_8durationIlSt5ratioILl1ELl1000EEEES2_ILl1ELl1000000EElLb1ELb0EE6__castIlS2_ILl1ELl1000000000EEEES4_RKNS1_IT_T0_EE, funcdef_no=4041, decl_uid=81266, cgraph_uid=1646, symbol_order=1650)
+
+std::chrono::__duration_cast_impl<std::chrono::duration<long int, std::ratio<1, 1000> >, std::ratio<1, 1000000>, long int, true, false>::__cast<long int, std::ratio<1, 1000000000> > (const struct duration & __d)
+{
+  const long int D.82473;
+  struct duration D.82474;
+  struct duration D.85353;
+  long int _1;
+  long int _2;
+
+  <bb 2> :
+  _1 = std::chrono::duration<long int, std::ratio<1, 1000000000> >::count (__d_4(D));
+  _2 = _1 / 1000000;
+  D.82473 = _2;
+  std::chrono::duration<long int, std::ratio<1, 1000> >::duration<long int> (&D.82474, &D.82473);
+  D.85353 = D.82474;
+  D.82474 ={v} {CLOBBER};
+  D.82473 ={v} {CLOBBER};
+
+  <bb 3> :
+<L2>:
+  return D.85353;
+
+}
+
+
+
+;; Function std::operator==<char, std::char_traits<char>, std::allocator<char> > (_ZSteqIcSt11char_traitsIcESaIcEEbRKNSt7__cxx1112basic_stringIT_T0_T1_EEPKS5_, funcdef_no=4045, decl_uid=81299, cgraph_uid=1650, symbol_order=1654)
+
+std::operator==<char, std::char_traits<char>, std::allocator<char> > (const struct basic_string & __lhs, const char * __rhs)
+{
+  bool D.85049;
+  int _1;
+  bool _6;
+
+  <bb 2> :
+  _1 = std::__cxx11::basic_string<char>::compare (__lhs_3(D), __rhs_4(D));
+  _6 = _1 == 0;
+
+  <bb 3> :
+<L0>:
+  return _6;
+
+}
+
+
+
+;; Function __gnu_cxx::__alloc_traits<std::allocator<double>, double>::_S_select_on_copy (_ZN9__gnu_cxx14__alloc_traitsISaIdEdE17_S_select_on_copyERKS1_, funcdef_no=4050, decl_uid=57072, cgraph_uid=1655, symbol_order=1659)
+
+__gnu_cxx::__alloc_traits<std::allocator<double>, double>::_S_select_on_copy (const struct allocator & __a)
+{
+  <bb 2> :
+  *_2(D) = std::allocator_traits<std::allocator<double> >::select_on_container_copy_construction (__a_3(D)); [return slot optimization]
+
+  <bb 3> :
+<L0>:
+  return _2(D);
+
+}
+
+
+
+;; Function std::_Vector_base<double, std::allocator<double> >::_M_get_Tp_allocator (_ZNKSt12_Vector_baseIdSaIdEE19_M_get_Tp_allocatorEv, funcdef_no=4051, decl_uid=57096, cgraph_uid=1656, symbol_order=1660)
+
+std::_Vector_base<double, std::allocator<double> >::_M_get_Tp_allocator (const struct _Vector_base * const this)
+{
+  const struct _Tp_alloc_type & D.85365;
+  const struct _Tp_alloc_type & _2;
+
+  <bb 2> :
+  _2 = &this_1(D)->_M_impl;
+
+  <bb 3> :
+<L0>:
+  return _2;
+
+}
+
+
+
+;; Function std::vector<double>::begin (_ZNKSt6vectorIdSaIdEE5beginEv, funcdef_no=4052, decl_uid=57484, cgraph_uid=1657, symbol_order=1661)
+
+std::vector<double>::begin (const struct vector * const this)
+{
+  const double * const D.82509;
+  struct const_iterator D.82510;
+  struct const_iterator D.85375;
+  double * _1;
+
+  <bb 2> :
+  _1 = this_3(D)->D.57901._M_impl.D.57204._M_start;
+  D.82509 = _1;
+  __gnu_cxx::__normal_iterator<const double*, std::vector<double> >::__normal_iterator (&D.82510, &D.82509);
+  D.85375 = D.82510;
+  D.82510 ={v} {CLOBBER};
+  D.82509 ={v} {CLOBBER};
+
+  <bb 3> :
+<L2>:
+  return D.85375;
+
+}
+
+
+
+;; Function std::vector<double>::end (_ZNKSt6vectorIdSaIdEE3endEv, funcdef_no=4053, decl_uid=57488, cgraph_uid=1658, symbol_order=1662)
+
+std::vector<double>::end (const struct vector * const this)
+{
+  const double * const D.82512;
+  struct const_iterator D.82513;
+  struct const_iterator D.85371;
+  double * _1;
+
+  <bb 2> :
+  _1 = this_3(D)->D.57901._M_impl.D.57204._M_finish;
+  D.82512 = _1;
+  __gnu_cxx::__normal_iterator<const double*, std::vector<double> >::__normal_iterator (&D.82513, &D.82512);
+  D.85371 = D.82513;
+  D.82513 ={v} {CLOBBER};
+  D.82512 ={v} {CLOBBER};
+
+  <bb 3> :
+<L2>:
+  return D.85371;
+
+}
+
+
+
+;; Function std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<const double*, std::vector<double> >, double*, double> (_ZSt22__uninitialized_copy_aIN9__gnu_cxx17__normal_iteratorIPKdSt6vectorIdSaIdEEEEPddET0_T_SA_S9_RSaIT1_E, funcdef_no=4054, decl_uid=81416, cgraph_uid=1659, symbol_order=1663)
+
+std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<const double*, std::vector<double> >, double*, double> (struct __normal_iterator __first, struct __normal_iterator __last, double * __result, struct allocator & D.81420)
+{
+  double * D.85381;
+  double * D.85379;
+  double * _4;
+  double * _5;
+
+  <bb 2> :
+  _4 = std::uninitialized_copy<__gnu_cxx::__normal_iterator<const double*, std::vector<double> >, double*> (__first, __last, __result_2(D));
+  _5 = _4;
+
+  <bb 3> :
+<L0>:
+  return _5;
+
+}
+
+
+
+;; Function std::vector<double>::_S_max_size (_ZNSt6vectorIdSaIdEE11_S_max_sizeERKS0_, funcdef_no=4086, decl_uid=57755, cgraph_uid=1691, symbol_order=1695)
+
+std::vector<double>::_S_max_size (const struct _Tp_alloc_type & __a)
+{
+  const size_t __allocmax;
+  const size_t __diffmax;
+  size_type D.85205;
+  long unsigned int _1;
+  const long unsigned int & _2;
+  size_type _9;
+
+  <bb 2> :
+  __diffmax = 1152921504606846975;
+  _1 = std::allocator_traits<std::allocator<double> >::max_size (__a_5(D));
+  __allocmax = _1;
+  _2 = std::min<long unsigned int> (&__diffmax, &__allocmax);
+  _9 = *_2;
+  __diffmax ={v} {CLOBBER};
+  __allocmax ={v} {CLOBBER};
+
+  <bb 3> :
+<L1>:
+  return _9;
+
+}
+
+
+
+;; Function std::allocator<double>::allocator (_ZNSaIdEC2ERKS_, funcdef_no=4088, decl_uid=56985, cgraph_uid=1693, symbol_order=1697)
+
+std::allocator<double>::allocator (struct allocator * const this, const struct allocator & __a)
+{
+  <bb 2> :
+  __gnu_cxx::new_allocator<double>::new_allocator (this_2(D), __a_3(D));
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<double, std::allocator<double> >::_Vector_impl::_Vector_impl (_ZNSt12_Vector_baseIdSaIdEE12_Vector_implC2ERKS0_, funcdef_no=4091, decl_uid=57197, cgraph_uid=1696, symbol_order=1700)
+
+std::_Vector_base<double, std::allocator<double> >::_Vector_impl::_Vector_impl (struct _Vector_impl * const this, const struct _Tp_alloc_type & __a)
+{
+  struct _Vector_impl_data * _1;
+
+  <bb 2> :
+  MEM[(struct  &)this_3(D)] ={v} {CLOBBER};
+  std::allocator<double>::allocator (this_3(D), __a_5(D));
+  _1 = &this_3(D)->D.57204;
+  std::_Vector_base<double, std::allocator<double> >::_Vector_impl_data::_Vector_impl_data (_1);
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<double, std::allocator<double> >::_M_create_storage (_ZNSt12_Vector_baseIdSaIdEE17_M_create_storageEm, funcdef_no=4093, decl_uid=57213, cgraph_uid=1698, symbol_order=1702)
+
+std::_Vector_base<double, std::allocator<double> >::_M_create_storage (struct _Vector_base * const this, size_t __n)
+{
+  double * D.85217;
+  double * _1;
+  double * _2;
+  double * _3;
+  long unsigned int _4;
+  double * _5;
+  double * _10;
+
+  <bb 2> :
+  _10 = std::_Vector_base<double, std::allocator<double> >::_M_allocate (this_7(D), __n_8(D));
+  _1 = _10;
+  this_7(D)->_M_impl.D.57204._M_start = _1;
+  _2 = this_7(D)->_M_impl.D.57204._M_start;
+  this_7(D)->_M_impl.D.57204._M_finish = _2;
+  _3 = this_7(D)->_M_impl.D.57204._M_start;
+  _4 = __n_8(D) * 8;
+  _5 = _3 + _4;
+  this_7(D)->_M_impl.D.57204._M_end_of_storage = _5;
+  return;
+
+}
+
+
+
+;; Function std::__uninitialized_default_n_a<double*, long unsigned int, double> (_ZSt27__uninitialized_default_n_aIPdmdET_S1_T0_RSaIT1_E, funcdef_no=4094, decl_uid=81812, cgraph_uid=1699, symbol_order=1703)
+
+std::__uninitialized_default_n_a<double*, long unsigned int, double> (double * __first, long unsigned int __n, struct allocator & D.81815)
+{
+  double * D.85239;
+  double * D.85237;
+  double * _5;
+  double * _6;
+
+  <bb 2> :
+  _5 = std::__uninitialized_default_n<double*, long unsigned int> (__first_2(D), __n_3(D));
+  _6 = _5;
+
+  <bb 3> :
+<L0>:
+  return _6;
+
+}
+
+
+
+;; Function std::_Destroy<double*> (_ZSt8_DestroyIPdEvT_S1_, funcdef_no=4095, decl_uid=81822, cgraph_uid=1700, symbol_order=1704)
+
+std::_Destroy<double*> (double * __first, double * __last)
+{
+  <bb 2> :
+  std::_Destroy_aux<true>::__destroy<double*> (__first_2(D), __last_3(D));
+  return;
+
+}
+
+
+
+;; Function std::allocator_traits<std::allocator<long unsigned int> >::deallocate (_ZNSt16allocator_traitsISaImEE10deallocateERS0_Pmm, funcdef_no=4096, decl_uid=61107, cgraph_uid=1701, symbol_order=1705)
+
+std::allocator_traits<std::allocator<long unsigned int> >::deallocate (struct allocator_type & __a, long unsigned int * __p, size_type __n)
+{
+  <bb 2> :
+  __gnu_cxx::new_allocator<long unsigned int>::deallocate (__a_2(D), __p_3(D), __n_4(D));
+  return;
+
+}
+
+
+
+;; Function std::_Destroy<long unsigned int*> (_ZSt8_DestroyIPmEvT_S1_, funcdef_no=4097, decl_uid=81839, cgraph_uid=1702, symbol_order=1706)
+
+std::_Destroy<long unsigned int*> (long unsigned int * __first, long unsigned int * __last)
+{
+  <bb 2> :
+  std::_Destroy_aux<true>::__destroy<long unsigned int*> (__first_2(D), __last_3(D));
+  return;
+
+}
+
+
+
+;; Function std::allocator_traits<std::allocator<double> >::deallocate (_ZNSt16allocator_traitsISaIdEE10deallocateERS0_Pdm, funcdef_no=4098, decl_uid=57024, cgraph_uid=1703, symbol_order=1707)
+
+std::allocator_traits<std::allocator<double> >::deallocate (struct allocator_type & __a, double * __p, size_type __n)
+{
+  <bb 2> :
+  __gnu_cxx::new_allocator<double>::deallocate (__a_2(D), __p_3(D), __n_4(D));
+  return;
+
+}
+
+
+
+;; Function std::vector<long unsigned int>::_S_max_size (_ZNSt6vectorImSaImEE11_S_max_sizeERKS0_, funcdef_no=4117, decl_uid=61796, cgraph_uid=1722, symbol_order=1726)
+
+std::vector<long unsigned int>::_S_max_size (const struct _Tp_alloc_type & __a)
+{
+  const size_t __allocmax;
+  const size_t __diffmax;
+  size_type D.85275;
+  long unsigned int _1;
+  const long unsigned int & _2;
+  size_type _9;
+
+  <bb 2> :
+  __diffmax = 1152921504606846975;
+  _1 = std::allocator_traits<std::allocator<long unsigned int> >::max_size (__a_5(D));
+  __allocmax = _1;
+  _2 = std::min<long unsigned int> (&__diffmax, &__allocmax);
+  _9 = *_2;
+  __diffmax ={v} {CLOBBER};
+  __allocmax ={v} {CLOBBER};
+
+  <bb 3> :
+<L1>:
+  return _9;
+
+}
+
+
+
+;; Function std::allocator_traits<std::allocator<long unsigned int> >::allocate (_ZNSt16allocator_traitsISaImEE8allocateERS0_m, funcdef_no=4119, decl_uid=61100, cgraph_uid=1724, symbol_order=1728)
+
+std::allocator_traits<std::allocator<long unsigned int> >::allocate (struct allocator_type & __a, size_type __n)
+{
+  long unsigned int * D.85293;
+  long unsigned int * D.85291;
+  long unsigned int * _5;
+  long unsigned int * _6;
+
+  <bb 2> :
+  _5 = __gnu_cxx::new_allocator<long unsigned int>::allocate (__a_2(D), __n_3(D), 0B);
+  _6 = _5;
+
+  <bb 3> :
+<L0>:
+  return _6;
+
+}
+
+
+
+;; Function std::allocator_traits<std::allocator<double> >::allocate (_ZNSt16allocator_traitsISaIdEE8allocateERS0_m, funcdef_no=4125, decl_uid=57017, cgraph_uid=1730, symbol_order=1734)
+
+std::allocator_traits<std::allocator<double> >::allocate (struct allocator_type & __a, size_type __n)
+{
+  double * D.85227;
+  double * D.85225;
+  double * _5;
+  double * _6;
+
+  <bb 2> :
+  _5 = __gnu_cxx::new_allocator<double>::allocate (__a_2(D), __n_3(D), 0B);
+  _6 = _5;
+
+  <bb 3> :
+<L0>:
+  return _6;
+
+}
+
+
+
+;; Function std::allocator<long unsigned int>::allocator (_ZNSaImEC2ERKS_, funcdef_no=4134, decl_uid=61068, cgraph_uid=1739, symbol_order=1743)
+
+std::allocator<long unsigned int>::allocator (struct allocator * const this, const struct allocator & __a)
+{
+  <bb 2> :
+  __gnu_cxx::new_allocator<long unsigned int>::new_allocator (this_2(D), __a_3(D));
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_impl::_Vector_impl (_ZNSt12_Vector_baseImSaImEE12_Vector_implC2ERKS0_, funcdef_no=4137, decl_uid=61280, cgraph_uid=1742, symbol_order=1746)
+
+std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_impl::_Vector_impl (struct _Vector_impl * const this, const struct _Tp_alloc_type & __a)
+{
+  struct _Vector_impl_data * _1;
+
+  <bb 2> :
+  MEM[(struct  &)this_3(D)] ={v} {CLOBBER};
+  std::allocator<long unsigned int>::allocator (this_3(D), __a_5(D));
+  _1 = &this_3(D)->D.61287;
+  std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_Vector_impl_data::_Vector_impl_data (_1);
+  return;
+
+}
+
+
+
+;; Function std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_M_create_storage (_ZNSt12_Vector_baseImSaImEE17_M_create_storageEm, funcdef_no=4139, decl_uid=61296, cgraph_uid=1744, symbol_order=1748)
+
+std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_M_create_storage (struct _Vector_base * const this, size_t __n)
+{
+  long unsigned int * D.85283;
+  long unsigned int * _1;
+  long unsigned int * _2;
+  long unsigned int * _3;
+  long unsigned int _4;
+  long unsigned int * _5;
+  long unsigned int * _10;
+
+  <bb 2> :
+  _10 = std::_Vector_base<long unsigned int, std::allocator<long unsigned int> >::_M_allocate (this_7(D), __n_8(D));
+  _1 = _10;
+  this_7(D)->_M_impl.D.61287._M_start = _1;
+  _2 = this_7(D)->_M_impl.D.61287._M_start;
+  this_7(D)->_M_impl.D.61287._M_finish = _2;
+  _3 = this_7(D)->_M_impl.D.61287._M_start;
+  _4 = __n_8(D) * 8;
+  _5 = _3 + _4;
+  this_7(D)->_M_impl.D.61287._M_end_of_storage = _5;
+  return;
+
+}
+
+
+
+;; Function std::__uninitialized_fill_n_a<long unsigned int*, long unsigned int, long unsigned int, long unsigned int> (_ZSt24__uninitialized_fill_n_aIPmmmmET_S1_T0_RKT1_RSaIT2_E, funcdef_no=4140, decl_uid=82114, cgraph_uid=1745, symbol_order=1749)
+
+std::__uninitialized_fill_n_a<long unsigned int*, long unsigned int, long unsigned int, long unsigned int> (long unsigned int * __first, long unsigned int __n, const long unsigned int & __x, struct allocator & D.82118)
+{
+  long unsigned int * D.85305;
+  long unsigned int * D.85303;
+  long unsigned int * _6;
+  long unsigned int * _7;
+
+  <bb 2> :
+  _6 = std::uninitialized_fill_n<long unsigned int*, long unsigned int, long unsigned int> (__first_2(D), __n_3(D), __x_4(D));
+  _7 = _6;
+
+  <bb 3> :
+<L0>:
+  return _7;
+
+}
+
+
+
+;; Function std::chrono::duration<long int, std::ratio<1, 1000> >::duration<long int> (_ZNSt6chrono8durationIlSt5ratioILl1ELl1000EEEC2IlvEERKT_, funcdef_no=4169, decl_uid=82470, cgraph_uid=1774, symbol_order=1778)
+
+std::chrono::duration<long int, std::ratio<1, 1000> >::duration<long int> (struct duration * const this, const long int & __rep)
+{
+  long int _1;
+
+  <bb 2> :
+  MEM[(struct  &)this_3(D)] ={v} {CLOBBER};
+  _1 = *__rep_5(D);
+  this_3(D)->__r = _1;
+  return;
+
+}
+
+
+
+;; Function std::allocator_traits<std::allocator<double> >::select_on_container_copy_construction (_ZNSt16allocator_traitsISaIdEE37select_on_container_copy_constructionERKS0_, funcdef_no=4173, decl_uid=57039, cgraph_uid=1778, symbol_order=1782)
+
+std::allocator_traits<std::allocator<double> >::select_on_container_copy_construction (const struct allocator_type & __rhs)
+{
+  <bb 2> :
+  std::allocator<double>::allocator (_2(D), __rhs_3(D));
+
+  <bb 3> :
+<L0>:
+  return _2(D);
+
+}
+
+
+
+;; Function __gnu_cxx::__normal_iterator<const double*, std::vector<double> >::__normal_iterator (_ZN9__gnu_cxx17__normal_iteratorIPKdSt6vectorIdSaIdEEEC2ERKS2_, funcdef_no=4175, decl_uid=81397, cgraph_uid=1780, symbol_order=1784)
+
+__gnu_cxx::__normal_iterator<const double*, std::vector<double> >::__normal_iterator (struct __normal_iterator * const this, const double * const & __i)
+{
+  const double * _1;
+
+  <bb 2> :
+  MEM[(struct  &)this_3(D)] ={v} {CLOBBER};
+  _1 = *__i_5(D);
+  this_3(D)->_M_current = _1;
+  return;
+
+}
+
+
+
+;; Function std::uninitialized_copy<__gnu_cxx::__normal_iterator<const double*, std::vector<double> >, double*> (_ZSt18uninitialized_copyIN9__gnu_cxx17__normal_iteratorIPKdSt6vectorIdSaIdEEEEPdET0_T_SA_S9_, funcdef_no=4177, decl_uid=82515, cgraph_uid=1782, symbol_order=1786)
+
+std::uninitialized_copy<__gnu_cxx::__normal_iterator<const double*, std::vector<double> >, double*> (struct __normal_iterator __first, struct __normal_iterator __last, double * __result)
+{
+  double * D.85384;
+  const bool __assignable;
+  double * D.85382;
+  double * _5;
+  double * _6;
+
+  <bb 2> :
+  __assignable_1 = 1;
+  _5 = std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<const double*, std::vector<double> >, double*> (__first, __last, __result_3(D));
+  _6 = _5;
+
+  <bb 3> :
+<L0>:
+  return _6;
+
+}
+
+
+
+;; Function std::allocator_traits<std::allocator<double> >::max_size (_ZNSt16allocator_traitsISaIdEE8max_sizeERKS0_, funcdef_no=4210, decl_uid=57037, cgraph_uid=1815, symbol_order=1819)
+
+std::allocator_traits<std::allocator<double> >::max_size (const struct allocator_type & __a)
+{
+  size_type D.85208;
+  size_type _4;
+
+  <bb 2> :
+  _4 = __gnu_cxx::new_allocator<double>::max_size (__a_2(D));
+
+  <bb 3> :
+<L0>:
+  return _4;
+
+}
+
+
+
+;; Function std::min<long unsigned int> (_ZSt3minImERKT_S2_S2_, funcdef_no=4211, decl_uid=11657, cgraph_uid=1816, symbol_order=1820)
+
+std::min<long unsigned int> (const long unsigned int & __a, const long unsigned int & __b)
+{
+  const long unsigned int & D.85214;
+  long unsigned int _1;
+  long unsigned int _2;
+  const long unsigned int & _3;
+  const long unsigned int & _7;
+  const long unsigned int & _8;
+
+  <bb 2> :
+  _1 = *__b_5(D);
+  _2 = *__a_6(D);
+  if (_1 < _2)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  _8 = __b_5(D);
+  // predicted unlikely by early return (on trees) predictor.
+  goto <bb 5>; [INV]
+
+  <bb 4> :
+  _7 = __a_6(D);
+
+  <bb 5> :
+  # _3 = PHI <_8(3), _7(4)>
+<L2>:
+  return _3;
+
+}
+
+
+
+;; Function __gnu_cxx::new_allocator<double>::new_allocator (_ZN9__gnu_cxx13new_allocatorIdEC2ERKS1_, funcdef_no=4213, decl_uid=56915, cgraph_uid=1818, symbol_order=1822)
+
+__gnu_cxx::new_allocator<double>::new_allocator (struct new_allocator * const this, const struct new_allocator & D.56917)
+{
+  <bb 2> :
+  return;
+
+}
+
+
+
+;; Function std::__uninitialized_default_n<double*, long unsigned int> (_ZSt25__uninitialized_default_nIPdmET_S1_T0_, funcdef_no=4215, decl_uid=82928, cgraph_uid=1820, symbol_order=1824)
+
+std::__uninitialized_default_n<double*, long unsigned int> (double * __first, long unsigned int __n)
+{
+  double * D.85242;
+  const bool __assignable;
+  double * D.85240;
+  double * _6;
+  double * _7;
+
+  <bb 2> :
+  __assignable_1 = 1;
+  _6 = std::__uninitialized_default_n_1<true>::__uninit_default_n<double*, long unsigned int> (__first_3(D), __n_4(D));
+  _7 = _6;
+
+  <bb 3> :
+<L0>:
+  return _7;
+
+}
+
+
+
+;; Function std::_Destroy_aux<true>::__destroy<double*> (_ZNSt12_Destroy_auxILb1EE9__destroyIPdEEvT_S3_, funcdef_no=4216, decl_uid=82937, cgraph_uid=1821, symbol_order=1825)
+
+std::_Destroy_aux<true>::__destroy<double*> (double * D.82938, double * D.82939)
+{
+  <bb 2> :
+  GIMPLE_NOP
+  return;
+
+}
+
+
+
+;; Function __gnu_cxx::new_allocator<long unsigned int>::deallocate (_ZN9__gnu_cxx13new_allocatorImE10deallocateEPmm, funcdef_no=4217, decl_uid=60964, cgraph_uid=1822, symbol_order=1826)
+
+__gnu_cxx::new_allocator<long unsigned int>::deallocate (struct new_allocator * const this, long unsigned int * __p, size_type D.60967)
+{
+  <bb 2> :
+  operator delete (__p_2(D));
+  return;
+
+}
+
+
+
+;; Function std::_Destroy_aux<true>::__destroy<long unsigned int*> (_ZNSt12_Destroy_auxILb1EE9__destroyIPmEEvT_S3_, funcdef_no=4218, decl_uid=82947, cgraph_uid=1823, symbol_order=1827)
+
+std::_Destroy_aux<true>::__destroy<long unsigned int*> (long unsigned int * D.82948, long unsigned int * D.82949)
+{
+  <bb 2> :
+  GIMPLE_NOP
+  return;
+
+}
+
+
+
+;; Function __gnu_cxx::new_allocator<double>::deallocate (_ZN9__gnu_cxx13new_allocatorIdE10deallocateEPdm, funcdef_no=4219, decl_uid=56881, cgraph_uid=1824, symbol_order=1828)
+
+__gnu_cxx::new_allocator<double>::deallocate (struct new_allocator * const this, double * __p, size_type D.56884)
+{
+  <bb 2> :
+  operator delete (__p_2(D));
+  return;
+
+}
+
+
+
+;; Function std::allocator_traits<std::allocator<long unsigned int> >::max_size (_ZNSt16allocator_traitsISaImEE8max_sizeERKS0_, funcdef_no=4223, decl_uid=61120, cgraph_uid=1828, symbol_order=1832)
+
+std::allocator_traits<std::allocator<long unsigned int> >::max_size (const struct allocator_type & __a)
+{
+  size_type D.85278;
+  size_type _4;
+
+  <bb 2> :
+  _4 = __gnu_cxx::new_allocator<long unsigned int>::max_size (__a_2(D));
+
+  <bb 3> :
+<L0>:
+  return _4;
+
+}
+
+
+
+;; Function __gnu_cxx::new_allocator<long unsigned int>::allocate (_ZN9__gnu_cxx13new_allocatorImE8allocateEmPKv, funcdef_no=4224, decl_uid=60960, cgraph_uid=1829, symbol_order=1833)
+
+__gnu_cxx::new_allocator<long unsigned int>::allocate (struct new_allocator * const this, size_type __n, const void * D.60963)
+{
+  long unsigned int * D.85299;
+  long unsigned int * D.85297;
+  bool retval.19;
+  long unsigned int _1;
+  long unsigned int _2;
+  bool retval.19_7;
+  long unsigned int * _9;
+  long unsigned int * _10;
+
+  <bb 2> :
+  _1 = __gnu_cxx::new_allocator<long unsigned int>::max_size (this_4(D));
+  retval.19_7 = __n_6(D) > _1;
+  if (retval.19_7 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  std::__throw_bad_alloc ();
+
+  <bb 4> :
+  _2 = __n_6(D) * 8;
+  _9 = operator new (_2);
+  _10 = _9;
+
+  <bb 5> :
+<L2>:
+  return _10;
+
+}
+
+
+
+;; Function __gnu_cxx::new_allocator<double>::allocate (_ZN9__gnu_cxx13new_allocatorIdE8allocateEmPKv, funcdef_no=4227, decl_uid=56877, cgraph_uid=1832, symbol_order=1836)
+
+__gnu_cxx::new_allocator<double>::allocate (struct new_allocator * const this, size_type __n, const void * D.56880)
+{
+  double * D.85233;
+  double * D.85231;
+  bool retval.15;
+  long unsigned int _1;
+  long unsigned int _2;
+  bool retval.15_7;
+  double * _9;
+  double * _10;
+
+  <bb 2> :
+  _1 = __gnu_cxx::new_allocator<double>::max_size (this_4(D));
+  retval.15_7 = __n_6(D) > _1;
+  if (retval.15_7 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  std::__throw_bad_alloc ();
+
+  <bb 4> :
+  _2 = __n_6(D) * 8;
+  _9 = operator new (_2);
+  _10 = _9;
+
+  <bb 5> :
+<L2>:
+  return _10;
+
+}
+
+
+
+;; Function __gnu_cxx::new_allocator<long unsigned int>::new_allocator (_ZN9__gnu_cxx13new_allocatorImEC2ERKS1_, funcdef_no=4231, decl_uid=60998, cgraph_uid=1836, symbol_order=1840)
+
+__gnu_cxx::new_allocator<long unsigned int>::new_allocator (struct new_allocator * const this, const struct new_allocator & D.61000)
+{
+  <bb 2> :
+  return;
+
+}
+
+
+
+;; Function std::uninitialized_fill_n<long unsigned int*, long unsigned int, long unsigned int> (_ZSt20uninitialized_fill_nIPmmmET_S1_T0_RKT1_, funcdef_no=4233, decl_uid=83056, cgraph_uid=1838, symbol_order=1842)
+
+std::uninitialized_fill_n<long unsigned int*, long unsigned int, long unsigned int> (long unsigned int * __first, long unsigned int __n, const long unsigned int & __x)
+{
+  long unsigned int * D.85308;
+  const bool __assignable;
+  long unsigned int * D.85306;
+  long unsigned int * _7;
+  long unsigned int * _8;
+
+  <bb 2> :
+  __assignable_1 = 1;
+  _7 = std::__uninitialized_fill_n<true>::__uninit_fill_n<long unsigned int*, long unsigned int, long unsigned int> (__first_3(D), __n_4(D), __x_5(D));
+  _8 = _7;
+
+  <bb 3> :
+<L0>:
+  return _8;
+
+}
+
+
+
+;; Function std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<const double*, std::vector<double> >, double*> (_ZNSt20__uninitialized_copyILb1EE13__uninit_copyIN9__gnu_cxx17__normal_iteratorIPKdSt6vectorIdSaIdEEEEPdEET0_T_SC_SB_, funcdef_no=4264, decl_uid=83219, cgraph_uid=1869, symbol_order=1873)
+
+std::__uninitialized_copy<true>::__uninit_copy<__gnu_cxx::__normal_iterator<const double*, std::vector<double> >, double*> (struct __normal_iterator __first, struct __normal_iterator __last, double * __result)
+{
+  double * D.85387;
+  double * D.85385;
+  double * _4;
+  double * _5;
+
+  <bb 2> :
+  _4 = std::copy<__gnu_cxx::__normal_iterator<const double*, std::vector<double> >, double*> (__first, __last, __result_2(D));
+  _5 = _4;
+
+  <bb 3> :
+<L0>:
+  return _5;
+
+}
+
+
+
+;; Function __gnu_cxx::new_allocator<double>::max_size (_ZNK9__gnu_cxx13new_allocatorIdE8max_sizeEv, funcdef_no=4293, decl_uid=56885, cgraph_uid=1898, symbol_order=1902)
+
+__gnu_cxx::new_allocator<double>::max_size (const struct new_allocator * const this)
+{
+  size_type D.85210;
+  size_type _1;
+
+  <bb 2> :
+  _1 = 1152921504606846975;
+
+  <bb 3> :
+<L0>:
+  return _1;
+
+}
+
+
+
+;; Function std::__uninitialized_default_n_1<true>::__uninit_default_n<double*, long unsigned int> (_ZNSt27__uninitialized_default_n_1ILb1EE18__uninit_default_nIPdmEET_S3_T0_, funcdef_no=4294, decl_uid=83948, cgraph_uid=1899, symbol_order=1903)
+
+std::__uninitialized_default_n_1<true>::__uninit_default_n<double*, long unsigned int> (double * __first, long unsigned int __n)
+{
+  double * D.85245;
+  const double D.84306;
+  double * D.85243;
+  double * _6;
+  double * _7;
+
+  <bb 2> :
+  D.84306 = 0.0;
+  _6 = std::fill_n<double*, long unsigned int, double> (__first_3(D), __n_4(D), &D.84306);
+  _7 = _6;
+
+  <bb 3> :
+  D.84306 ={v} {CLOBBER};
+
+  <bb 4> :
+<L1>:
+  return _7;
+
+}
+
+
+
+;; Function __gnu_cxx::new_allocator<long unsigned int>::max_size (_ZNK9__gnu_cxx13new_allocatorImE8max_sizeEv, funcdef_no=4295, decl_uid=60968, cgraph_uid=1900, symbol_order=1904)
+
+__gnu_cxx::new_allocator<long unsigned int>::max_size (const struct new_allocator * const this)
+{
+  size_type D.85280;
+  size_type _1;
+
+  <bb 2> :
+  _1 = 1152921504606846975;
+
+  <bb 3> :
+<L0>:
+  return _1;
+
+}
+
+
+
+;; Function std::__niter_base<long unsigned int*> (_ZSt12__niter_baseIPmET_S1_, funcdef_no=4296, decl_uid=79383, cgraph_uid=1901, symbol_order=1905)
+
+std::__niter_base<long unsigned int*> (long unsigned int * __it)
+{
+  long unsigned int * D.85314;
+  long unsigned int * _2;
+
+  <bb 2> :
+  _2 = __it_1(D);
+
+  <bb 3> :
+<L0>:
+  return _2;
+
+}
+
+
+
+;; Function std::__niter_base<double*> (_ZSt12__niter_baseIPdET_S1_, funcdef_no=4299, decl_uid=79845, cgraph_uid=1904, symbol_order=1908)
+
+std::__niter_base<double*> (double * __it)
+{
+  double * D.85250;
+  double * _2;
+
+  <bb 2> :
+  _2 = __it_1(D);
+
+  <bb 3> :
+<L0>:
+  return _2;
+
+}
+
+
+
+;; Function std::__uninitialized_fill_n<true>::__uninit_fill_n<long unsigned int*, long unsigned int, long unsigned int> (_ZNSt22__uninitialized_fill_nILb1EE15__uninit_fill_nIPmmmEET_S3_T0_RKT1_, funcdef_no=4302, decl_uid=84024, cgraph_uid=1907, symbol_order=1911)
+
+std::__uninitialized_fill_n<true>::__uninit_fill_n<long unsigned int*, long unsigned int, long unsigned int> (long unsigned int * __first, long unsigned int __n, const long unsigned int & __x)
+{
+  long unsigned int * D.85311;
+  long unsigned int * D.85309;
+  long unsigned int * _6;
+  long unsigned int * _7;
+
+  <bb 2> :
+  _6 = std::fill_n<long unsigned int*, long unsigned int, long unsigned int> (__first_2(D), __n_3(D), __x_4(D));
+  _7 = _6;
+
+  <bb 3> :
+<L0>:
+  return _7;
+
+}
+
+
+
+;; Function std::copy<__gnu_cxx::__normal_iterator<const double*, std::vector<double> >, double*> (_ZSt4copyIN9__gnu_cxx17__normal_iteratorIPKdSt6vectorIdSaIdEEEEPdET0_T_SA_S9_, funcdef_no=4317, decl_uid=84193, cgraph_uid=1922, symbol_order=1926)
+
+std::copy<__gnu_cxx::__normal_iterator<const double*, std::vector<double> >, double*> (struct __normal_iterator __first, struct __normal_iterator __last, double * __result)
+{
+  double * D.85392;
+  struct __normal_iterator D.85390;
+  struct __normal_iterator D.85389;
+  double * D.85388;
+  double * _6;
+  double * _7;
+
+  <bb 2> :
+  D.85389 = std::__miter_base<__gnu_cxx::__normal_iterator<const double*, std::vector<double> > > (__last);
+  D.85390 = std::__miter_base<__gnu_cxx::__normal_iterator<const double*, std::vector<double> > > (__first);
+  _6 = std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<const double*, std::vector<double> >, double*> (D.85390, D.85389, __result_4(D));
+  _7 = _6;
+
+  <bb 3> :
+<L0>:
+  return _7;
+
+}
+
+
+
+;; Function std::fill_n<double*, long unsigned int, double> (_ZSt6fill_nIPdmdET_S1_T0_RKT1_, funcdef_no=4342, decl_uid=84302, cgraph_uid=1947, symbol_order=1951)
+
+std::fill_n<double*, long unsigned int, double> (double * __first, long unsigned int __n, const double & __value)
+{
+  double * D.85248;
+  double * __first.16_1;
+  double * _2;
+  double * _3;
+  double * _10;
+
+  <bb 2> :
+  __first.16_1 = __first;
+  _2 = std::__niter_base<double*> (__first.16_1);
+  _3 = std::__fill_n_a<double*, long unsigned int, double> (_2, __n_6(D), __value_7(D));
+  _10 = std::__niter_wrap<double*> (&__first, _3);
+
+  <bb 3> :
+<L0>:
+  return _10;
+
+}
+
+
+
+;; Function std::fill_n<long unsigned int*, long unsigned int, long unsigned int> (_ZSt6fill_nIPmmmET_S1_T0_RKT1_, funcdef_no=4345, decl_uid=84329, cgraph_uid=1950, symbol_order=1954)
+
+std::fill_n<long unsigned int*, long unsigned int, long unsigned int> (long unsigned int * __first, long unsigned int __n, const long unsigned int & __value)
+{
+  long unsigned int * D.85312;
+  long unsigned int * __first.20_1;
+  long unsigned int * _2;
+  long unsigned int * _3;
+  long unsigned int * _10;
+
+  <bb 2> :
+  __first.20_1 = __first;
+  _2 = std::__niter_base<long unsigned int*> (__first.20_1);
+  _3 = std::__fill_n_a<long unsigned int*, long unsigned int, long unsigned int> (_2, __n_6(D), __value_7(D));
+  _10 = std::__niter_wrap<long unsigned int*> (&__first, _3);
+
+  <bb 3> :
+<L0>:
+  return _10;
+
+}
+
+
+
+;; Function std::__miter_base<__gnu_cxx::__normal_iterator<const double*, std::vector<double> > > (_ZSt12__miter_baseIN9__gnu_cxx17__normal_iteratorIPKdSt6vectorIdSaIdEEEEET_S8_, funcdef_no=4364, decl_uid=84411, cgraph_uid=1969, symbol_order=1973)
+
+std::__miter_base<__gnu_cxx::__normal_iterator<const double*, std::vector<double> > > (struct __normal_iterator __it)
+{
+  struct __normal_iterator D.85393;
+
+  <bb 2> :
+  D.85393 = __it;
+
+  <bb 3> :
+<L0>:
+  return D.85393;
+
+}
+
+
+
+;; Function std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<const double*, std::vector<double> >, double*> (_ZSt14__copy_move_a2ILb0EN9__gnu_cxx17__normal_iteratorIPKdSt6vectorIdSaIdEEEEPdET1_T0_SA_S9_, funcdef_no=4365, decl_uid=84417, cgraph_uid=1970, symbol_order=1974)
+
+std::__copy_move_a2<false, __gnu_cxx::__normal_iterator<const double*, std::vector<double> >, double*> (struct __normal_iterator __first, struct __normal_iterator __last, double * __result)
+{
+  double * D.85397;
+  double * D.85395;
+  double * __result.21_1;
+  double * _2;
+  const double * _3;
+  const double * _4;
+  double * _5;
+  double * _11;
+  double * _13;
+
+  <bb 2> :
+  __result.21_1 = __result;
+  _2 = std::__niter_base<double*> (__result.21_1);
+  _3 = std::__niter_base<const double*, std::vector<double> > (__last);
+  _4 = std::__niter_base<const double*, std::vector<double> > (__first);
+  _11 = std::__copy_move_a<false, const double*, double*> (_4, _3, _2);
+  _5 = _11;
+  _13 = std::__niter_wrap<double*> (&__result, _5);
+
+  <bb 3> :
+<L0>:
+  return _13;
+
+}
+
+
+
+;; Function std::__fill_n_a<double*, long unsigned int, double> (_ZSt10__fill_n_aIPdmdEN9__gnu_cxx11__enable_ifIXsrSt11__is_scalarIT1_E7__valueET_E6__typeES6_T0_RKS4_, funcdef_no=4374, decl_uid=84532, cgraph_uid=1979, symbol_order=1983)
+
+std::__fill_n_a<double*, long unsigned int, double> (double * __first, long unsigned int __n, const double & __value)
+{
+  long unsigned int __niter;
+  const double __tmp;
+  double * D.85254;
+  double * _13;
+
+  <bb 2> :
+  __tmp_6 = *__value_5(D);
+  __niter_8 = __n_7(D);
+
+  <bb 3> :
+  # __first_1 = PHI <__first_9(D)(2), __first_12(4)>
+  # __niter_2 = PHI <__niter_8(2), __niter_11(4)>
+  if (__niter_2 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 4> :
+  *__first_1 = __tmp_6;
+  __niter_11 = __niter_2 + 18446744073709551615;
+  __first_12 = __first_1 + 8;
+  goto <bb 3>; [INV]
+
+  <bb 5> :
+  _13 = __first_1;
+
+  <bb 6> :
+<L3>:
+  return _13;
+
+}
+
+
+
+;; Function std::__niter_wrap<double*> (_ZSt12__niter_wrapIPdET_RKS1_S1_, funcdef_no=4375, decl_uid=84536, cgraph_uid=1980, symbol_order=1984)
+
+std::__niter_wrap<double*> (double * const & D.84537, double * __res)
+{
+  double * D.85256;
+  double * _2;
+
+  <bb 2> :
+  _2 = __res_1(D);
+
+  <bb 3> :
+<L0>:
+  return _2;
+
+}
+
+
+
+;; Function std::__fill_n_a<long unsigned int*, long unsigned int, long unsigned int> (_ZSt10__fill_n_aIPmmmEN9__gnu_cxx11__enable_ifIXsrSt11__is_scalarIT1_E7__valueET_E6__typeES6_T0_RKS4_, funcdef_no=4380, decl_uid=84624, cgraph_uid=1985, symbol_order=1989)
+
+std::__fill_n_a<long unsigned int*, long unsigned int, long unsigned int> (long unsigned int * __first, long unsigned int __n, const long unsigned int & __value)
+{
+  long unsigned int __niter;
+  const long unsigned int __tmp;
+  long unsigned int * D.85318;
+  long unsigned int * _13;
+
+  <bb 2> :
+  __tmp_6 = *__value_5(D);
+  __niter_8 = __n_7(D);
+
+  <bb 3> :
+  # __first_1 = PHI <__first_9(D)(2), __first_12(4)>
+  # __niter_2 = PHI <__niter_8(2), __niter_11(4)>
+  if (__niter_2 == 0)
+    goto <bb 5>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 4> :
+  *__first_1 = __tmp_6;
+  __niter_11 = __niter_2 + 18446744073709551615;
+  __first_12 = __first_1 + 8;
+  goto <bb 3>; [INV]
+
+  <bb 5> :
+  _13 = __first_1;
+
+  <bb 6> :
+<L3>:
+  return _13;
+
+}
+
+
+
+;; Function std::__niter_wrap<long unsigned int*> (_ZSt12__niter_wrapIPmET_RKS1_S1_, funcdef_no=4381, decl_uid=84628, cgraph_uid=1986, symbol_order=1990)
+
+std::__niter_wrap<long unsigned int*> (long unsigned int * const & D.84629, long unsigned int * __res)
+{
+  long unsigned int * D.85320;
+  long unsigned int * _2;
+
+  <bb 2> :
+  _2 = __res_1(D);
+
+  <bb 3> :
+<L0>:
+  return _2;
+
+}
+
+
+
+;; Function std::__niter_base<const double*, std::vector<double> > (_ZSt12__niter_baseIPKdSt6vectorIdSaIdEEET_N9__gnu_cxx17__normal_iteratorIS5_T0_EE, funcdef_no=4393, decl_uid=84706, cgraph_uid=1998, symbol_order=2002)
+
+std::__niter_base<const double*, std::vector<double> > (struct __normal_iterator __it)
+{
+  const double * D.85398;
+  const double * const & _1;
+  const double * _4;
+
+  <bb 2> :
+  _1 = __gnu_cxx::__normal_iterator<const double*, std::vector<double> >::base (&__it);
+  _4 = *_1;
+
+  <bb 3> :
+<L0>:
+  return _4;
+
+}
+
+
+
+;; Function std::__copy_move_a<false, const double*, double*> (_ZSt13__copy_move_aILb0EPKdPdET1_T0_S4_S3_, funcdef_no=4394, decl_uid=84777, cgraph_uid=1999, symbol_order=2003)
+
+std::__copy_move_a<false, const double*, double*> (const double * __first, const double * __last, double * __result)
+{
+  const bool __simple;
+  double * D.85402;
+  double * _7;
+
+  <bb 2> :
+  __simple_1 = 1;
+  _7 = std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<double> (__first_3(D), __last_4(D), __result_5(D));
+
+  <bb 3> :
+<L0>:
+  return _7;
+
+}
+
+
+
+;; Function __gnu_cxx::__normal_iterator<const double*, std::vector<double> >::base (_ZNK9__gnu_cxx17__normal_iteratorIPKdSt6vectorIdSaIdEEE4baseEv, funcdef_no=4410, decl_uid=81384, cgraph_uid=2015, symbol_order=2019)
+
+__gnu_cxx::__normal_iterator<const double*, std::vector<double> >::base (const struct __normal_iterator * const this)
+{
+  const double * const & D.85400;
+  const double * const & _2;
+
+  <bb 2> :
+  _2 = &this_1(D)->_M_current;
+
+  <bb 3> :
+<L0>:
+  return _2;
+
+}
+
+
+
+;; Function std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<double> (_ZNSt11__copy_moveILb0ELb1ESt26random_access_iterator_tagE8__copy_mIdEEPT_PKS3_S6_S4_, funcdef_no=4411, decl_uid=84889, cgraph_uid=2016, symbol_order=2020)
+
+std::__copy_move<false, true, std::random_access_iterator_tag>::__copy_m<double> (const double * __first, const double * __last, double * __result)
+{
+  const ptrdiff_t _Num;
+  double * D.85407;
+  long int _1;
+  long unsigned int _Num.22_2;
+  long unsigned int _3;
+  long unsigned int _Num.23_4;
+  long unsigned int _5;
+  double * _13;
+
+  <bb 2> :
+  _1 = __last_7(D) - __first_8(D);
+  _Num_9 = _1 /[ex] 8;
+  if (_Num_9 != 0)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 4>; [INV]
+
+  <bb 3> :
+  _Num.22_2 = (long unsigned int) _Num_9;
+  _3 = _Num.22_2 * 8;
+  __builtin_memmove (__result_11(D), __first_8(D), _3);
+
+  <bb 4> :
+  _Num.23_4 = (long unsigned int) _Num_9;
+  _5 = _Num.23_4 * 8;
+  _13 = __result_11(D) + _5;
+
+  <bb 5> :
+<L3>:
+  return _13;
+
+}
+
+
+
+;; Function __static_initialization_and_destruction_0 (_Z41__static_initialization_and_destruction_0ii, funcdef_no=4415, decl_uid=84991, cgraph_uid=2020, symbol_order=2112)
+
+__static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  <bb 2> :
+  if (__initialize_p_2(D) == 1)
+    goto <bb 3>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 3> :
+  if (__priority_4(D) == 65535)
+    goto <bb 4>; [INV]
+  else
+    goto <bb 5>; [INV]
+
+  <bb 4> :
+  std::ios_base::Init::Init (&__ioinit);
+  __cxa_atexit (__dt_comp , &__ioinit, &__dso_handle);
+
+  <bb 5> :
+  return;
+
+}
+
+
+
+;; Function _GLOBAL__sub_I__Z6headerRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE (_GLOBAL__sub_I__Z6headerRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE, funcdef_no=4416, decl_uid=84999, cgraph_uid=2021, symbol_order=2871)
+
+_GLOBAL__sub_I__Z6headerRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE ()
+{
+  <bb 2> :
+  __static_initialization_and_destruction_0 (1, 65535);
+  return;
+
+}
+
+

@@ -1,0 +1,126 @@
+{
+   "empirical": {
+      "gbytes": {
+         "data": [
+            [
+               "L1", 
+               132.31
+            ], 
+            [
+               "DRAM", 
+               13.18
+            ]
+         ], 
+         "metadata": {
+            "TIMESTAMP_DATA": 1650588984.2, 
+            "FLOPS": 1, 
+            "TIMESTAMP_DB": 1650589009.606335
+         }
+      }, 
+      "gflops": {
+         "data": [
+            [
+               "GFLOPs", 
+               44.84
+            ]
+         ], 
+         "metadata": {
+            "TIMESTAMP_DATA": 1650588989.34, 
+            "FLOPS": 16, 
+            "TIMESTAMP_DB": 1650589009.606189
+         }
+      }, 
+      "metadata": {
+         "ERT_VERSION": "1.1.0", 
+         "HOSTNAME": [
+            "559548279ca1", 
+            [], 
+            [
+               "172.17.0.3"
+            ]
+         ], 
+         "CONFIG": {
+            "ERT_WORKING_SET_MIN": [
+               "1"
+            ], 
+            "ERT_CFLAGS": [
+               "-Ofast", 
+               "-march=native"
+            ], 
+            "ERT_CC": [
+               "cc"
+            ], 
+            "ERT_MPI_CFLAGS": [], 
+            "ERT_MPI_LDFLAGS": [], 
+            "ERT_MEMORY_MAX": [
+               "134217728", 
+               "#", 
+               "128MB"
+            ], 
+            "ERT_LDFLAGS": [], 
+            "ERT_LDLIBS": [], 
+            "ERT_RUN": [
+               "./ERT_CODE"
+            ], 
+            "ERT_FLOPS": [
+               "1,4,16,64"
+            ], 
+            "ERT_OPENMP_CFLAGS": [
+               "-fopenmp"
+            ], 
+            "ERT_MPI": [
+               "False"
+            ], 
+            "ERT_TRIALS_MIN": [
+               "1"
+            ], 
+            "ERT_DRIVER": [
+               "driver1"
+            ], 
+            "ERT_RESULTS": [
+               "Sequential"
+            ], 
+            "ERT_OPENMP": [
+               "False"
+            ], 
+            "ERT_KERNEL": [
+               "kernel1"
+            ], 
+            "ERT_GPU": [
+               false
+            ], 
+            "ERT_LD": [
+               "cc"
+            ], 
+            "ERT_NUM_EXPERIMENTS": [
+               "1"
+            ], 
+            "ERT_OPENMP_LDFLAGS": [
+               "-fopenmp"
+            ], 
+            "ERT_ALIGN": [
+               "64"
+            ], 
+            "ERT_GNUPLOT": [
+               "gnuplot"
+            ]
+         }, 
+         "UNAME": [
+            "Linux", 
+            "559548279ca1", 
+            "5.10.16.3-microsoft-standard-WSL2", 
+            "#1 SMP Fri Apr 2 22:23:49 UTC 2021", 
+            "x86_64", 
+            "x86_64"
+         ]
+      }
+   }, 
+   "spec": {
+      "gbytes": {
+         "data": []
+      }, 
+      "gflops": {
+         "data": []
+      }
+   }
+}

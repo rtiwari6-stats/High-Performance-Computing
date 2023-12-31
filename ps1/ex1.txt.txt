@@ -1,0 +1,33 @@
+1. c++ -o <output_name> <file.cpp>.
+E.g. to update output of this exercise to write to c.out, we can use the following command: 
+c++ -std=c++11 cos4pi.cpp -I/usr/include/python3.8 -lpython3.8 -o c.out
+We use the -o option to specify the name of the output file.
+
+2. $ a.out is treated by bash as a command and it gives the error "bash: a.out: command not found" because no such 
+command exists.
+$ ./a.out is treated  by bash as an executable in current directory (specified by the path "./").
+Operationally, $ a.out is a command while $ ./a.out is an executable in current directory.
+
+3. $ c++ --version
+clang version 10.0.0-4ubuntu1 
+Target: x86_64-pc-linux-gnu
+Thread model: posix
+InstalledDir: /usr/bin
+
+4. size_t refers to unsigned integer type (cannot take values less than zero). It is used to represent the size of any object 
+in bytes. It is the return type of the sizeof operator and is also used in the standard library to represent sizes and counts. 
+It is also used in loop index because it can store the maximum length of a theoretical object of any size.
+
+5. The shape looks like the letter "W"
+
+6. -I (eye): This is an include path flag. It adds directory to include search path. If there are multiple -I paths provided, 
+these directories are searched in order they are provided before the standard system directories are searched. 
+In case the same directory is in the system include search paths, then it is ignored. In our example, this includes the 
+python header files  while compiling.
+-l (ell): This is a linker flag. In our example, this links the specified python library.
+
+references:
+1. https://www.cplusplus.com/reference/cstring/size_t/
+2. https://en.cppreference.com/w/cpp/types/size_t
+3. https://clang.llvm.org/docs/ClangCommandLineReference.html#include-path-management
+4. https://clang.llvm.org/docs/ClangCommandLineReference.html#linker-flags

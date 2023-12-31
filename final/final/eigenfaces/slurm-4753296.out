@@ -1,0 +1,8 @@
+# Face size 109 x 89
+# elapsed time [read_file]: 14204 ms
+# elapsed time [scattering]: 10835 ms
+# elapsed time [compute_mean]: 212 ms
+# elapsed time [compute_shifted]: 165 ms
+# elapsed time [reduce]: 1192 ms
+# elapsed time [compute_covariance]: 4762 ms
+# Gflops/s = 8007.76

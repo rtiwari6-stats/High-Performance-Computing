@@ -1,0 +1,31 @@
+#images mult_0(A,B) mult_1(A,B) mult_2(A,B) mult_3(A,B)  m_t_0(A,C)  m_t_1(A,C)  m_t_2(A,C)  m_t_3(A,C)  m_t_0(A,A)  m_t_1(A,A)  m_t_2(A,A)  m_t_3(A,A)    m_t_4(A)  m_t_5(A,A)
+Reading 2051 128 of 60000 28 by 28
+max val = 255
+Read 128 images, each with 784 pixels
+A is 128 by 784
+In Optimized code
+         128     1.51118     1.60563     6.42253     8.56337     1.71267     12.8451     25.6901     25.6901     1.71267     25.6901          -1     25.6901     25.6901     25.6901
+Reading 2051 256 of 60000 28 by 28
+max val = 255
+Read 256 images, each with 784 pixels
+A is 256 by 784
+In Optimized code
+         256          -1          -1     3.54346     7.34003          -1     14.6801     25.6901     20.5521          -1     17.1267          -1     25.6901     25.6901     34.2535
+Reading 2051 512 of 60000 28 by 28
+max val = 255
+Read 512 images, each with 784 pixels
+A is 512 by 784
+In Optimized code
+         512          -1          -1     1.48928     2.81535          -1     13.7014     22.8357     20.5521          -1     12.0895          -1     17.1267     18.6837     27.4028
+Reading 2051 1024 of 60000 28 by 28
+max val = 255
+Read 1024 images, each with 784 pixels
+A is 1024 by 784
+In Optimized code
+        1024          -1          -1          -1     2.85942          -1     3.38306     7.37295     16.9502          -1     3.27523          -1     16.9502     17.6792     26.9536
+Reading 2051 2048 of 60000 28 by 28
+max val = 255
+Read 2048 images, each with 784 pixels
+A is 2048 by 784
+In Optimized code
+        2048          -1          -1          -1     2.66694          -1     2.88324     6.67682     14.6474          -1     3.04194          -1     16.0016     16.4829     27.4028
